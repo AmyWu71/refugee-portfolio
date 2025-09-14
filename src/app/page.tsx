@@ -7,7 +7,8 @@ export default function Home() {
       <section className="relative overflow-hidden rounded-2xl text-white min-h-[600px]">
         <div className="absolute inset-0">
           <Image
-            src="/user-map.png"
+
+src="/user-map.png"
             alt="Myanmar-Thailand border humanitarian aid map"
             fill
             className="object-cover blur-[1.5px]"
