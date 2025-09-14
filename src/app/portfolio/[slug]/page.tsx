@@ -67,7 +67,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               <h4 className="font-semibold mb-2">Key Findings:</h4>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Approximately 1.7 million Myanmar refugees are classified as irregular status, unable to obtain documents required for formal employment</li>
-                <li>Over one-third of refugees earn monthly incomes far below Thailand's legal minimum wage standards</li>
+                <li>Over one-third of refugees earn monthly incomes far below Thailand&apos;s legal minimum wage standards</li>
                 <li>Language barriers, educational gaps, and identity restrictions constitute major employment obstacles</li>
                 <li>NGOs provide support through educational programs and rights advocacy</li>
               </ul>
