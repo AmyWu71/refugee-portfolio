@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   assetPrefix: '/refugee-portfolio/',
   images: {
     unoptimized: true
+  },
+  // 确保静态资源正确导出
+  distDir: 'out',
+  // 禁用服务端功能
+  experimental: {
+    esmExternals: false
   }
 };
 

@@ -4,6 +4,17 @@ on:
   push:
     branches: [ main ]
 
+# 设置权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 确保只有一个部署作业同时运行
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,8 +37,19 @@ jobs:
       - name: Create .nojekyll file
         run: touch out/.nojekyll
         
+      - name: Verify build output
+        run: |
+          echo "Build output contents:"
+          ls -la out/
+          echo "CSS files:"
+          find out -name "*.css" -type f
+          echo "JS files:"
+          find out -name "*.js" -type f | head -5
+        
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.1.4
         with:
           branch: gh-pages
           folder: out
+          clean: true
+          single-commit: true
