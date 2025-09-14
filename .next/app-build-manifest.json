@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/app/_not-found/page-b4137cec793678b3.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/css/bc8d4c249ccd6fd4.css",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/layout-6456b529b7c98015.js"
+    ],
+    "/background/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/app/background/page-b35c5cd39ad33efe.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/app/contact/page-b35c5cd39ad33efe.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/356-09117ec0a6304a3c.js",
+      "static/chunks/app/about/page-f04c88a46f6eb51d.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/356-09117ec0a6304a3c.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/page-02baef4d14a4a34d.js"
+    ],
+    "/portfolio/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/356-09117ec0a6304a3c.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/portfolio/page-c398bdd324c33a60.js"
+    ],
+    "/portfolio/[slug]/page": [
+      "static/chunks/webpack-b64c3e24b9f9ad6b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-a58930c833ddc49f.js",
+      "static/chunks/main-app-1db47373556d8a3a.js",
+      "static/chunks/356-09117ec0a6304a3c.js",
+      "static/chunks/app/portfolio/[slug]/page-f04c88a46f6eb51d.js"
+    ]
+  }
+}
