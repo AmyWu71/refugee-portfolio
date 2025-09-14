@@ -1,18 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: '/refugee-portfolio',
-  assetPrefix: '/refugee-portfolio/',
+  // 本地开发配置 - 移除GitHub Pages相关设置
   images: {
     unoptimized: true
-  },
-  // 确保静态资源正确导出
-  distDir: 'out',
-  // 禁用服务端功能
-  experimental: {
-    esmExternals: false
   }
 };
 
