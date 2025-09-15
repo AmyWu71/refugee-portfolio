@@ -36,7 +36,7 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     slug: "handbook-visual-guide",
-    title: "Handbook: Refugee Employment Guide",
+    title: "Handbook: Refugee Employment, Education and Medication Guide",
     category: "visual",
     summary: "Comprehensive visual guide for refugee employment assistance, covering legal rights, job search strategies, and community resources.",
     background: "Based on field research and expert interviews, providing practical guidance for Myanmar refugees' employment in Thailand.",
