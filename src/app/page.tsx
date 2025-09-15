@@ -36,15 +36,15 @@ src="/user-map.png"
       </section>
 
       <section className="grid gap-6 sm:grid-cols-3">
-        <Link href="/portfolio?category=research" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
+        <Link href="/portfolio/research-report-employment-challenges" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
           <h3 className="text-lg font-medium text-slate-800">研究论文/学术文章</h3>
           <p className="mt-2 text-sm text-slate-600">AP Seminar、独立研究、相关写作</p>
         </Link>
-        <Link href="/portfolio?category=visual" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
+        <Link href="/portfolio/handbook-visual-guide" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
           <h3 className="text-lg font-medium text-slate-800">视觉作品</h3>
           <p className="mt-2 text-sm text-slate-600">海报、手绘、信息图</p>
         </Link>
-        <Link href="/portfolio?category=multimedia" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
+        <Link href="/portfolio/mun-proposal" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
           <h3 className="text-lg font-medium text-slate-800">多媒体</h3>
           <p className="mt-2 text-sm text-slate-600">视频、演讲稿、MUN 提案</p>
         </Link>
