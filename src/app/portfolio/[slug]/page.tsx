@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { portfolio } from "@/data/portfolio";
+import ImageCarousel from "@/components/ImageCarousel";
 
 export async function generateStaticParams() {
   return portfolio.map((p) => ({ slug: p.slug }));
@@ -24,17 +25,24 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         {item.slug === "mun-proposal" && (
           <h2 className="mt-2 text-lg text-gray-600">边境医疗与教育协作机制</h2>
         )}
+        {item.slug === "handbook-visual-guide" && (
+          <h2 className="mt-2 text-lg text-gray-600">难民就业指导手册</h2>
+        )}
         <p className="mt-2 text-sm text-gray-400">{item.background}</p>
       </header>
 
       {item.images?.length ? (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {item.images.map((src) => (
-            <div key={src} className="relative aspect-[4/3] bg-black/20 rounded-lg overflow-hidden">
-              <Image src={src} alt={item.title} fill className="object-cover" />
-            </div>
-          ))}
-        </div>
+        item.slug === "handbook-visual-guide" ? (
+          <ImageCarousel images={item.images} alt={item.title} />
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {item.images.map((src) => (
+              <div key={src} className="relative aspect-[4/3] bg-black/20 rounded-lg overflow-hidden">
+                <Image src={src} alt={item.title} fill className="object-cover" />
+              </div>
+            ))}
+          </div>
+        )
       ) : null}
 
       {item.pdf ? (
