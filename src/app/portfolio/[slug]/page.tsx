@@ -26,7 +26,10 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           <h2 className="mt-2 text-lg text-gray-600">边境医疗与教育协作机制</h2>
         )}
         {item.slug === "handbook-visual-guide" && (
-          <h2 className="mt-2 text-lg text-gray-600">Refugee Employment Guide</h2>
+          <>
+            <h2 className="mt-2 text-lg text-gray-600">Refugee Employment Guide</h2>
+            <p className="mt-1 text-sm text-gray-500">By Xuanjing Wu</p>
+          </>
         )}
         <p className="mt-2 text-sm text-gray-400">{item.background}</p>
       </header>

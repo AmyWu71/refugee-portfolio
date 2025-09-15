@@ -39,7 +39,7 @@ export const portfolio: PortfolioItem[] = [
     title: "Handbook: Refugee Employment Guide",
     category: "visual",
     summary: "Comprehensive visual guide for refugee employment assistance, covering legal rights, job search strategies, and community resources.",
-    background: "基于实地调研和专家访谈，为缅甸难民在泰国的就业提供实用指导。",
+    background: "Based on field research and expert interviews, providing practical guidance for Myanmar refugees' employment in Thailand.",
     thumbnail: "/images/handbook/截屏2025-09-15 19.59.37.png",
     images: [
       "/images/handbook/截屏2025-09-15 19.59.37.png",
