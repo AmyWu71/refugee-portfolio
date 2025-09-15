@@ -94,35 +94,51 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           )}
           
           {item.slug === "research-report-employment-challenges" && (
-            /* 研究报告摘要 */
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4">Research Report Summary</h3>
-              <div className="prose max-w-none text-sm">
-                <p className="mb-4">
-                  According to statistics from the International Organization for Migration (IOM), as of early 2025, there are over 3.33 million registered Myanmar refugees in Thailand and along the Thai-Myanmar border, reaching a historic high. More than 60% of these refugees have been stranded in Thailand for over five years, making this one of the longest-lasting refugee crises in Southeast Asia.
-                </p>
-                <h4 className="font-semibold mb-2">Key Findings:</h4>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Approximately 1.7 million Myanmar refugees are classified as irregular status, unable to obtain documents required for formal employment</li>
-                  <li>Over one-third of refugees earn monthly incomes far below Thailand&apos;s legal minimum wage standards</li>
-                  <li>Language barriers, educational gaps, and identity restrictions constitute major employment obstacles</li>
-                  <li>NGOs provide support through educational programs and rights advocacy</li>
-                </ul>
-                <p className="mt-4 text-gray-600">
-                  For the complete report, please download the PDF document above.
-                </p>
-                <p className="mt-3">
-                  <a 
-                    href="https://www.chinadevelopmentbrief.org.cn/news/detail/66147.html" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    View original article on China Development Brief
-                  </a>
-                </p>
+            <>
+              {/* 研究报告PDF查看器 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="bg-gray-100 px-4 py-3 border-b">
+                  <h3 className="text-lg font-semibold text-gray-800">Research Report PDF</h3>
+                </div>
+                <div className="h-[80vh]">
+                  <iframe
+                    src={item.pdf}
+                    className="w-full h-full border-0"
+                    title="Research Report PDF"
+                  />
+                </div>
               </div>
-            </div>
+              
+              {/* 研究报告摘要 */}
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-4">Research Report Summary</h3>
+                <div className="prose max-w-none text-sm">
+                  <p className="mb-4">
+                    According to statistics from the International Organization for Migration (IOM), as of early 2025, there are over 3.33 million registered Myanmar refugees in Thailand and along the Thai-Myanmar border, reaching a historic high. More than 60% of these refugees have been stranded in Thailand for over five years, making this one of the longest-lasting refugee crises in Southeast Asia.
+                  </p>
+                  <h4 className="font-semibold mb-2">Key Findings:</h4>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Approximately 1.7 million Myanmar refugees are classified as irregular status, unable to obtain documents required for formal employment</li>
+                    <li>Over one-third of refugees earn monthly incomes far below Thailand&apos;s legal minimum wage standards</li>
+                    <li>Language barriers, educational gaps, and identity restrictions constitute major employment obstacles</li>
+                    <li>NGOs provide support through educational programs and rights advocacy</li>
+                  </ul>
+                  <p className="mt-4 text-gray-600">
+                    For the complete report, please view the PDF above or download it using the buttons above.
+                  </p>
+                  <p className="mt-3">
+                    <a 
+                      href="https://www.chinadevelopmentbrief.org.cn/news/detail/66147.html" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      View original article on China Development Brief
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </>
           )}
         </div>
       ) : null}
