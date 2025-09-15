@@ -22,14 +22,14 @@ src="/user-map.png"
             A Name, A Chance: Exploring Refugee Issues Through Research and Stories
           </h1>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-blue-50">
-            本网站展示了我关于缅甸难民及相关国际议题的研究与创作，旨在通过学术与艺术的结合，引发更多对全球难民问题的关注。
+            This website showcases my research and creative work on Myanmar refugees and related international issues, aiming to raise awareness about global refugee challenges through the integration of academic and artistic approaches.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/portfolio" className="inline-flex items-center rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-              浏览作品集
+              Browse Portfolio
             </Link>
             <Link href="/background" className="inline-flex items-center rounded-md bg-white/10 px-4 py-2 text-white hover:bg-white/20">
-              研究背景
+              Research Background
             </Link>
           </div>
         </div>
@@ -38,15 +38,15 @@ src="/user-map.png"
       <section className="grid gap-6 sm:grid-cols-3">
         <Link href="/portfolio/research-report-employment-challenges" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
           <h3 className="text-lg font-medium text-slate-800">Research Papers</h3>
-          <p className="mt-2 text-sm text-slate-600">AP Seminar, Independent Research, Academic Writing</p>
+          <p className="mt-2 text-sm text-slate-600">Independent Research</p>
         </Link>
         <Link href="/portfolio/handbook-visual-guide" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
           <h3 className="text-lg font-medium text-slate-800">Visual Works</h3>
-          <p className="mt-2 text-sm text-slate-600">Posters, Illustrations, Infographics</p>
+          <p className="mt-2 text-sm text-slate-600">Handbook</p>
         </Link>
         <Link href="/portfolio/mun-proposal" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
           <h3 className="text-lg font-medium text-slate-800">Multimedia</h3>
-          <p className="mt-2 text-sm text-slate-600">Videos, Presentations, MUN Proposals</p>
+          <p className="mt-2 text-sm text-slate-600">MUN Proposal</p>
         </Link>
       </section>
     </div>
