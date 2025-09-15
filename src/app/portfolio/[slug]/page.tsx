@@ -95,20 +95,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           
           {item.slug === "research-report-employment-challenges" && (
             <>
-              {/* 研究报告PDF查看器 */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-gray-100 px-4 py-3 border-b">
-                  <h3 className="text-lg font-semibold text-gray-800">Research Report PDF</h3>
-                </div>
-                <div className="h-[80vh]">
-                  <iframe
-                    src={item.pdf}
-                    className="w-full h-full border-0"
-                    title="Research Report PDF"
-                  />
-                </div>
-              </div>
-              
               {/* 研究报告摘要 */}
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-4">Research Report Summary</h3>
@@ -124,7 +110,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                     <li>NGOs provide support through educational programs and rights advocacy</li>
                   </ul>
                   <p className="mt-4 text-gray-600">
-                    For the complete report, please view the PDF above or download it using the buttons above.
+                    For the complete report, please view the PDF below or download it using the buttons above.
                   </p>
                   <p className="mt-3">
                     <a 
@@ -136,6 +122,20 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                       View original article on China Development Brief
                     </a>
                   </p>
+                </div>
+              </div>
+              
+              {/* 研究报告PDF查看器 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="bg-gray-100 px-4 py-3 border-b">
+                  <h3 className="text-lg font-semibold text-gray-800">Research Report PDF</h3>
+                </div>
+                <div className="h-[80vh]">
+                  <iframe
+                    src={item.pdf}
+                    className="w-full h-full border-0"
+                    title="Research Report PDF"
+                  />
                 </div>
               </div>
             </>
