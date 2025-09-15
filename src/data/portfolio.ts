@@ -25,16 +25,6 @@ export const portfolio: PortfolioItem[] = [
     reflection: "通过实地调研与数据分析，揭示了语言壁垒、教育断层与身份枷锁如何共同构成难民就业障碍。",
   },
   {
-    slug: "poster-migration",
-    title: "Visual Poster: 迁徙之路",
-    category: "visual",
-    summary: "Using border roads as imagery to present uncertainty and hope during migration.",
-    background: "艺术化表达难民日常与人道关怀。",
-    thumbnail: "/thumbnails/poster.svg",
-    images: ["/images/poster-1.jpg", "/images/poster-2.jpg"],
-    reflection: "视觉传达中的留白让观者产生自我投射与思考。",
-  },
-  {
     slug: "handbook-visual-guide",
     title: "Handbook: Refugee Employment, Education and Medication Guide",
     category: "visual",
