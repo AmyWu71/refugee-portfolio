@@ -36,7 +36,7 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     slug: "handbook-visual-guide",
-    title: "Handbook: 难民就业指导手册",
+    title: "Handbook: Refugee Employment Guide",
     category: "visual",
     summary: "Comprehensive visual guide for refugee employment assistance, covering legal rights, job search strategies, and community resources.",
     background: "基于实地调研和专家访谈，为缅甸难民在泰国的就业提供实用指导。",
