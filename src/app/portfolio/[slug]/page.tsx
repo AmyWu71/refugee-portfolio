@@ -128,7 +128,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               {/* 研究报告PDF查看器 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="bg-gray-100 px-4 py-3 border-b">
-                  <h3 className="text-lg font-semibold text-gray-800">Research Report PDF</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">View Complete Report</h3>
                 </div>
                 <div className="h-[80vh]">
                   <iframe
