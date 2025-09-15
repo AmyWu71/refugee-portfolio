@@ -68,6 +68,34 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             </a>
           </div>
           
+          {item.slug === "handbook-visual-guide" && (
+            /* Handbook问卷部分 */
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+              <h3 className="text-lg font-semibold mb-4 text-blue-800">Help Improve This Handbook</h3>
+              <div className="prose max-w-none text-sm text-blue-700">
+                <p className="mb-4">
+                  问卷仅用于收集更多有关难民的需求和困境资料，以更好的完善这份手册。问卷为匿名，任何资料将被保密。
+                </p>
+                <p className="mb-4 text-gray-600">
+                  This survey is designed to collect additional information about refugee needs and challenges to better improve this handbook. The survey is anonymous and all data will be kept confidential.
+                </p>
+                <div className="mt-4">
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfgpgbjAhCU109DRvIVEVwRm3NT6zIMkWpKOI5vTTCWK2WdAw/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Take Survey / 填写问卷
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+          
           {item.slug === "research-report-employment-challenges" && (
             /* 研究报告摘要 */
             <div className="bg-gray-50 p-6 rounded-lg">
