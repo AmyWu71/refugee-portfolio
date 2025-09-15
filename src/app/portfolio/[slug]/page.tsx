@@ -74,9 +74,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               <h3 className="text-lg font-semibold mb-4 text-blue-800">Help Improve This Handbook</h3>
               <div className="prose max-w-none text-sm text-blue-700">
                 <p className="mb-4">
-                  问卷仅用于收集更多有关难民的需求和困境资料，以更好的完善这份手册。问卷为匿名，任何资料将被保密。
-                </p>
-                <p className="mb-4 text-gray-600">
                   This survey is designed to collect additional information about refugee needs and challenges to better improve this handbook. The survey is anonymous and all data will be kept confidential.
                 </p>
                 <div className="mt-4">
@@ -89,7 +86,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Take Survey / 填写问卷
+                    Take Survey
                   </a>
                 </div>
               </div>
