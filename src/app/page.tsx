@@ -21,7 +21,6 @@ src="/user-map.png"
                   <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight max-w-3xl">
                     A Name, A Chance: Exploring Refugee Issues Through Research and Stories
                   </h1>
-                  <p className="mt-2 text-sm text-blue-200">Last updated: {new Date().toLocaleString()}</p>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-blue-50">
             This website showcases my research and creative work on Myanmar refugees and related international issues, aiming to raise awareness about global refugee challenges through the integration of academic and artistic approaches.
           </p>
