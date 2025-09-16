@@ -18,9 +18,10 @@ src="/user-map.png"
         {/* 半透明遮罩确保文字可读性 */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative px-8 py-24 sm:px-12 sm:py-28 lg:px-16 lg:py-32">
-          <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight max-w-3xl">
-            A Name, A Chance: Exploring Refugee Issues Through Research and Stories
-          </h1>
+                  <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight max-w-3xl">
+                    A Name, A Chance: Exploring Refugee Issues Through Research and Stories
+                  </h1>
+                  <p className="mt-2 text-sm text-blue-200">Last updated: {new Date().toLocaleString()}</p>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-blue-50">
             This website showcases my research and creative work on Myanmar refugees and related international issues, aiming to raise awareness about global refugee challenges through the integration of academic and artistic approaches.
           </p>
