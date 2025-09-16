@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
+  },
+  // 禁用一些在静态导出中不支持的功能
+  experimental: {
+    esmExternals: false
   }
 };
 
