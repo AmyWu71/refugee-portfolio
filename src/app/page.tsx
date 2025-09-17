@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div className="space-y-12">
-      <section className="relative overflow-hidden rounded-2xl text-white min-h-[600px]">
+      <section className="relative overflow-hidden rounded-2xl text-white min-h-[400px]">
         <div className="absolute inset-0">
           <Image
             src="/user-map.png"
@@ -52,7 +52,7 @@ export default function Home() {
               aria-label="Scroll to categories"
             >
               <svg 
-                className="w-6 h-6 text-white animate-bounce" 
+                className="w-6 h-6 text-white" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
