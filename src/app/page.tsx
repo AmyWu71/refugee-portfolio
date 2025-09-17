@@ -83,6 +83,9 @@ export default function Home() {
           <div className="p-6">
             <h3 className="text-lg font-medium text-slate-800">Research Papers</h3>
             <p className="mt-2 text-sm text-slate-600">Independent Research</p>
+            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+              {portfolio.find(p => p.slug === "research-report-employment-challenges")?.summary}
+            </p>
           </div>
         </Link>
         <Link href="/portfolio/handbook-visual-guide" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
@@ -97,6 +100,9 @@ export default function Home() {
           <div className="p-6">
             <h3 className="text-lg font-medium text-slate-800">Visual Works</h3>
             <p className="mt-2 text-sm text-slate-600">Handbook</p>
+            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+              {portfolio.find(p => p.slug === "handbook-visual-guide")?.summary}
+            </p>
           </div>
         </Link>
         <Link href="/portfolio/mun-proposal" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
@@ -111,6 +117,9 @@ export default function Home() {
           <div className="p-6">
             <h3 className="text-lg font-medium text-slate-800">Multimedia</h3>
             <p className="mt-2 text-sm text-slate-600">MUN Proposal</p>
+            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+              {portfolio.find(p => p.slug === "mun-proposal")?.summary}
+            </p>
           </div>
         </Link>
       </section>
