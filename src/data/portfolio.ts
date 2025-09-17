@@ -69,6 +69,7 @@ export const portfolio: PortfolioItem[] = [
     summary: "Proposal and presentation on cross-border medical and educational resource sharing.",
     background: "源自 MUN 模拟与 NGO 个案访谈材料。",
     thumbnail: "/thumbnails/mun.svg",
+    pdf: "/Rohingya Crisis Proposal.pdf",
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     reflection: "跨主体协作的可操作性与监督机制是推进的关键。",
   },
