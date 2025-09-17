@@ -54,7 +54,7 @@ export const portfolio: PortfolioItem[] = [
   {
     slug: "mun-proposal",
     title: "MUN Proposal: 边境医疗与教育协作机制",
-    category: "research",
+    category: "multimedia",
     summary: "Proposal and presentation on cross-border medical and educational resource sharing.",
     background: "源自 MUN 模拟与 NGO 个案访谈材料。",
     thumbnail: "/thumbnails/mun.svg",
