@@ -23,7 +23,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           <h2 className="mt-2 text-lg text-gray-600">迁徙之路</h2>
         )}
         {item.slug === "mun-proposal" && (
-          <h2 className="mt-2 text-lg text-gray-600">边境医疗与教育协作机制</h2>
         )}
         {item.slug === "handbook-visual-guide" && (
           <>
