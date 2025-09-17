@@ -68,7 +68,7 @@ export const portfolio: PortfolioItem[] = [
     category: "multimedia",
     summary: "A comprehensive MUN proposal addressing the Rohingya refugee crisis, focusing on international cooperation and sustainable solutions for refugee protection and resettlement.",
     background: "Based on MUN simulation and NGO case study interviews, this proposal examines the Rohingya crisis and proposes collaborative frameworks for international response.",
-    thumbnail: "/thumbnails/mun.svg",
+    thumbnail: "/mun-cover.png",
     pdf: "/Rohingya Crisis Proposal.pdf",
     video: "/25c0ca27fd47e1846bca438434e9caf5.mp4",
     reflection: "跨主体协作的可操作性与监督机制是推进的关键。",
