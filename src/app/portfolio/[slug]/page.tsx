@@ -211,7 +211,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                 <h3 className="text-lg font-semibold mb-4">Background Research Summary</h3>
                 <div className="prose max-w-none text-sm">
                   <p className="mb-4">
-                    This case study examines the Rohingya refugee crisis, one of the most pressing humanitarian issues in Southeast Asia. The Rohingya are a stateless Muslim minority group from Myanmar's Rakhine State, who have faced systematic persecution and violence, leading to mass displacement.
+                    This case study examines the Rohingya refugee crisis, one of the most pressing humanitarian issues in Southeast Asia. The Rohingya are a stateless Muslim minority group from Myanmar&apos;s Rakhine State, who have faced systematic persecution and violence, leading to mass displacement.
                   </p>
                   <h4 className="font-semibold mb-2">Key Focus Areas:</h4>
                   <ul className="list-disc pl-6 space-y-1">
