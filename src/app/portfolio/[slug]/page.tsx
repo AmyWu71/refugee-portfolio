@@ -76,6 +76,9 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                 <p className="mb-4">
                   This survey is designed to collect additional information about refugee needs and challenges to better improve this handbook. The survey is anonymous and all data will be kept confidential.
                 </p>
+                <p className="mb-4 text-sm">
+                  If you would like to submit a completed PDF survey, please email it to: <a href="mailto:amy08711@outlook.com" className="text-blue-600 hover:text-blue-800 underline">amy08711@outlook.com</a>
+                </p>
                 <div className="mt-4">
                   <div className="flex flex-wrap gap-3">
                     <a 
