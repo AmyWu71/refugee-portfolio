@@ -210,6 +210,45 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               </div>
             </>
           )}
+
+          {item.slug === "mun-proposal" && (
+            <>
+              {/* MUN提案摘要 */}
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-4">MUN Proposal Summary</h3>
+                <div className="prose max-w-none text-sm">
+                  <p className="mb-4">
+                    This MUN proposal addresses the refugee disputes and resettlement collaboration mechanism, focusing on cross-border cooperation for refugee protection and sustainable solutions. The proposal examines the complex challenges faced by refugees and proposes collaborative frameworks for international response.
+                  </p>
+                  <h4 className="font-semibold mb-2">Key Components:</h4>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Analysis of current refugee protection mechanisms</li>
+                    <li>Cross-border collaboration frameworks</li>
+                    <li>Resettlement and integration strategies</li>
+                    <li>International cooperation protocols</li>
+                    <li>Implementation and monitoring mechanisms</li>
+                  </ul>
+                  <p className="mt-4 text-gray-600">
+                    For the complete MUN proposal, please view the PDF below or download it using the buttons above.
+                  </p>
+                </div>
+              </div>
+              
+              {/* MUN提案PDF查看器 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="bg-gray-100 px-4 py-3 border-b">
+                  <h3 className="text-lg font-semibold text-gray-800">View Complete MUN Proposal</h3>
+                </div>
+                <div className="h-[80vh]">
+                  <iframe
+                    src={item.pdf}
+                    className="w-full h-full border-0"
+                    title="MUN Proposal PDF"
+                  />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       ) : null}
 
