@@ -9,6 +9,7 @@ export interface PortfolioItem {
   thumbnail: string;
   images?: string[];
   pdf?: string;
+  pdfs?: string[];
   video?: string;
   reflection?: string;
 }
@@ -22,6 +23,7 @@ export const portfolio: PortfolioItem[] = [
     background: "Based on International Organization for Migration (IOM) 2025 data, focusing on the most persistent refugee crisis in the Thai-Myanmar border region.",
     thumbnail: "/thumbnails/research-report-cover.png",
     pdf: "/pdfs/research-report-employment-challenges.pdf",
+    pdfs: ["/pdfs/research-report-employment-challenges.pdf", "/HIR-Xuanjing, Wu.pdf"],
     reflection: "通过实地调研与数据分析，揭示了语言壁垒、教育断层与身份枷锁如何共同构成难民就业障碍。",
   },
   {

@@ -48,24 +48,28 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         )
       ) : null}
 
-      {item.pdf ? (
+      {item.pdf || item.pdfs ? (
         <div className="space-y-4">
-          <div className="flex gap-4">
-            <a 
-              href={item.pdf} 
-              download
-              className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
-            >
-              Download PDF
-            </a>
-            <a 
-              href={item.pdf} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
-            >
-              Open in New Window
-            </a>
+          <div className="flex flex-wrap gap-4">
+            {(item.pdfs || [item.pdf]).map((pdf, index) => (
+              <div key={index} className="flex gap-2">
+                <a 
+                  href={pdf} 
+                  download
+                  className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                >
+                  Download PDF {item.pdfs && item.pdfs.length > 1 ? index + 1 : ''}
+                </a>
+                <a 
+                  href={pdf} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                >
+                  Open in New Window
+                </a>
+              </div>
+            ))}
           </div>
           
           {item.slug === "handbook-visual-guide" && (
