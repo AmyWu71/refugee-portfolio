@@ -64,10 +64,10 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     slug: "mun-proposal",
-    title: "MUN Proposal: Refugee Disputes and Resettlement Collaboration Mechanism",
+    title: "MUN Proposal: Rohingya Crisis Proposal",
     category: "multimedia",
-    summary: "Proposal and presentation on cross-border medical and educational resource sharing.",
-    background: "源自 MUN 模拟与 NGO 个案访谈材料。",
+    summary: "A comprehensive MUN proposal addressing the Rohingya refugee crisis, focusing on international cooperation and sustainable solutions for refugee protection and resettlement.",
+    background: "Based on MUN simulation and NGO case study interviews, this proposal examines the Rohingya crisis and proposes collaborative frameworks for international response.",
     thumbnail: "/thumbnails/mun.svg",
     pdf: "/Rohingya Crisis Proposal.pdf",
     reflection: "跨主体协作的可操作性与监督机制是推进的关键。",
