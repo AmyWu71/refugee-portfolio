@@ -71,7 +71,7 @@ export default function Home() {
       </section>
 
       <section ref={categoriesRef} className="grid gap-6 sm:grid-cols-3">
-        <Link href="/portfolio/research-report-employment-challenges" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
+        <Link href="/portfolio?category=research" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
           <div className="relative h-48 w-full">
             <Image
               src={portfolio.find(p => p.slug === "research-report-employment-challenges")?.thumbnail || "/thumbnails/research-report-cover.png"}

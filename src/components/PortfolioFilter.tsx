@@ -1,12 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
 import { portfolio } from "@/data/portfolio";
 
 export default function PortfolioFilter() {
+  const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    const category = searchParams.get('category');
+    if (category && ['research', 'visual', 'multimedia'].includes(category)) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
   
   const categories = [
     { key: null, label: 'All' },
