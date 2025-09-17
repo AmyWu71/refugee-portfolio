@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { portfolio } from "@/data/portfolio";
 
 export default function Home() {
   const categoriesRef = useRef<HTMLElement>(null);
@@ -70,17 +71,47 @@ export default function Home() {
       </section>
 
       <section ref={categoriesRef} className="grid gap-6 sm:grid-cols-3">
-        <Link href="/portfolio/research-report-employment-challenges" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
-          <h3 className="text-lg font-medium text-slate-800">Research Papers</h3>
-          <p className="mt-2 text-sm text-slate-600">Independent Research</p>
+        <Link href="/portfolio/research-report-employment-challenges" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
+          <div className="relative h-48 w-full">
+            <Image
+              src={portfolio.find(p => p.slug === "research-report-employment-challenges")?.thumbnail || "/thumbnails/research-report-cover.png"}
+              alt="Research Report Cover"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-medium text-slate-800">Research Papers</h3>
+            <p className="mt-2 text-sm text-slate-600">Independent Research</p>
+          </div>
         </Link>
-        <Link href="/portfolio/handbook-visual-guide" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
-          <h3 className="text-lg font-medium text-slate-800">Visual Works</h3>
-          <p className="mt-2 text-sm text-slate-600">Handbook</p>
+        <Link href="/portfolio/handbook-visual-guide" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
+          <div className="relative h-48 w-full">
+            <Image
+              src={portfolio.find(p => p.slug === "handbook-visual-guide")?.thumbnail || "/images/handbook-cover.png"}
+              alt="Handbook Cover"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-medium text-slate-800">Visual Works</h3>
+            <p className="mt-2 text-sm text-slate-600">Handbook</p>
+          </div>
         </Link>
-        <Link href="/portfolio/mun-proposal" className="rounded-xl border border-slate-200 bg-white p-6 hover:bg-slate-50 hover:shadow-md transition-all">
-          <h3 className="text-lg font-medium text-slate-800">Multimedia</h3>
-          <p className="mt-2 text-sm text-slate-600">MUN Proposal</p>
+        <Link href="/portfolio/mun-proposal" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
+          <div className="relative h-48 w-full">
+            <Image
+              src={portfolio.find(p => p.slug === "mun-proposal")?.thumbnail || "/thumbnails/mun.svg"}
+              alt="MUN Proposal Cover"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-medium text-slate-800">Multimedia</h3>
+            <p className="mt-2 text-sm text-slate-600">MUN Proposal</p>
+          </div>
         </Link>
       </section>
     </div>
