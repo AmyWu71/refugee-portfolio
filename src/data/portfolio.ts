@@ -16,16 +16,6 @@ export interface PortfolioItem {
 
 export const portfolio: PortfolioItem[] = [
   {
-    slug: "research-report-employment-challenges",
-    title: "Research Report: Challenges and Reasons for Myanmar Refugees in Thailand in Employment",
-    category: "research",
-    summary: "In-depth analysis of employment challenges faced by 3.33 million Myanmar refugees in Thailand, exploring informal employment, systematic exploitation, and identity restrictions.",
-    background: "Based on International Organization for Migration (IOM) 2025 data, focusing on the most persistent refugee crisis in the Thai-Myanmar border region.",
-    thumbnail: "/thumbnails/research-report-cover.png",
-    pdf: "/pdfs/research-report-employment-challenges.pdf",
-    reflection: "通过实地调研与数据分析，揭示了语言壁垒、教育断层与身份枷锁如何共同构成难民就业障碍。",
-  },
-  {
     slug: "rohingya-refugee-case-study",
     title: "Background Research: A Case Study on Rohingya Refugee",
     category: "research",
@@ -34,6 +24,16 @@ export const portfolio: PortfolioItem[] = [
     thumbnail: "/thumbnails/rohingya-research-cover.png",
     pdf: "/HIR-Xuanjing, Wu.pdf",
     reflection: "通过深入研究罗兴亚难民的个案，揭示了种族迫害与难民危机的复杂关系。",
+  },
+  {
+    slug: "research-report-employment-challenges",
+    title: "Research Report: Challenges and Reasons for Myanmar Refugees in Thailand in Employment",
+    category: "research",
+    summary: "In-depth analysis of employment challenges faced by 3.33 million Myanmar refugees in Thailand, exploring informal employment, systematic exploitation, and identity restrictions.",
+    background: "Based on International Organization for Migration (IOM) 2025 data, focusing on the most persistent refugee crisis in the Thai-Myanmar border region.",
+    thumbnail: "/thumbnails/research-report-cover.png",
+    pdf: "/pdfs/research-report-employment-challenges.pdf",
+    reflection: "通过实地调研与数据分析，揭示了语言壁垒、教育断层与身份枷锁如何共同构成难民就业障碍。",
   },
   {
     slug: "handbook-visual-guide",
