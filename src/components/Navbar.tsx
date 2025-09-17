@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <header className="bg-slate-800 border-b border-slate-200 shadow-sm">
-      <nav className="mx-auto max-w-full px-8 sm:px-12 lg:px-16 h-16 flex items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-8 sm:px-12 lg:px-16 h-16 flex items-center justify-between">
         <Link href="/" className="text-sm font-semibold tracking-wide text-slate-100">
           A Name, A Chance
         </Link>
