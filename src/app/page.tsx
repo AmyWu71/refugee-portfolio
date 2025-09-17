@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { portfolio } from "@/data/portfolio";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   const categoriesRef = useRef<HTMLElement>(null);
@@ -18,15 +19,7 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="relative overflow-hidden rounded-2xl text-white min-h-[400px]">
-        <div className="absolute inset-0">
-          <Image
-            src="/user-map.png"
-            alt="Myanmar-Thailand border humanitarian aid map"
-            fill
-            className="object-cover blur-[1.5px]"
-            priority
-          />
-        </div>
+        <HeroCarousel />
         {/* 半透明遮罩确保文字可读性 */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative px-8 py-24 sm:px-12 sm:py-28 lg:px-16 lg:py-32">
