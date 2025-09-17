@@ -47,27 +47,29 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
 
       {item.pdf || item.pdfs ? (
         <div className="space-y-4">
-          <div className="flex flex-wrap gap-4">
-            {(item.pdfs || [item.pdf]).map((pdf, index) => (
-              <div key={index} className="flex gap-2">
-                <a 
-                  href={pdf} 
-                  download
-                  className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
-                >
-                  Download PDF {item.pdfs && item.pdfs.length > 1 ? index + 1 : ''}
-                </a>
-                <a 
-                  href={pdf} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
-                >
-                  Open in New Window
-                </a>
-              </div>
-            ))}
-          </div>
+          {item.slug !== "mun-proposal" && (
+            <div className="flex flex-wrap gap-4">
+              {(item.pdfs || [item.pdf]).map((pdf, index) => (
+                <div key={index} className="flex gap-2">
+                  <a 
+                    href={pdf} 
+                    download
+                    className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                  >
+                    Download PDF {item.pdfs && item.pdfs.length > 1 ? index + 1 : ''}
+                  </a>
+                  <a 
+                    href={pdf} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                  >
+                    Open in New Window
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
           
           {item.slug === "handbook-visual-guide" && (
             /* Handbook问卷部分 */
@@ -243,9 +245,34 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                     <li>Implementation and monitoring mechanisms</li>
                   </ul>
                   <p className="mt-4 text-gray-600">
-                    For the complete MUN proposal, please view the PDF below or download it using the buttons above.
+                    For the complete MUN proposal, please view the PDF below or download it using the buttons below.
                   </p>
                 </div>
+              </div>
+              
+              {/* MUN提案下载按钮 */}
+              <div className="flex flex-wrap gap-4 mb-6">
+                <a
+                  href={item.pdf}
+                  download
+                  className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Download PDF
+                </a>
+                <a
+                  href={item.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Open in New Window
+                </a>
               </div>
               
               {/* MUN提案PDF查看器 */}
@@ -266,16 +293,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         </div>
       ) : null}
 
-      {item.video ? (
-        <div className="aspect-video w-full overflow-hidden rounded-lg">
-          <iframe
-            src={item.video}
-            className="w-full h-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      ) : null}
 
     </article>
   );
