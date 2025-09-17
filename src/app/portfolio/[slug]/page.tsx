@@ -171,6 +171,45 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               </div>
             </>
           )}
+
+          {item.slug === "rohingya-refugee-case-study" && (
+            <>
+              {/* 罗兴亚研究摘要 */}
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-4">Background Research Summary</h3>
+                <div className="prose max-w-none text-sm">
+                  <p className="mb-4">
+                    This case study examines the Rohingya refugee crisis, one of the most pressing humanitarian issues in Southeast Asia. The Rohingya are a stateless Muslim minority group from Myanmar's Rakhine State, who have faced systematic persecution and violence, leading to mass displacement.
+                  </p>
+                  <h4 className="font-semibold mb-2">Key Focus Areas:</h4>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Historical context of Rohingya persecution in Myanmar</li>
+                    <li>Displacement patterns and refugee flows to neighboring countries</li>
+                    <li>Challenges faced by Rohingya refugees in host countries</li>
+                    <li>International response and humanitarian assistance</li>
+                    <li>Long-term solutions and resettlement efforts</li>
+                  </ul>
+                  <p className="mt-4 text-gray-600">
+                    For the complete background research, please view the PDF below or download it using the buttons above.
+                  </p>
+                </div>
+              </div>
+              
+              {/* 罗兴亚研究PDF查看器 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="bg-gray-100 px-4 py-3 border-b">
+                  <h3 className="text-lg font-semibold text-gray-800">View Complete Background Research</h3>
+                </div>
+                <div className="h-[80vh]">
+                  <iframe
+                    src={item.pdf}
+                    className="w-full h-full border-0"
+                    title="Rohingya Refugee Case Study PDF"
+                  />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       ) : null}
 
