@@ -210,6 +210,23 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
 
           {item.slug === "mun-proposal" && (
             <>
+              {/* MUN提案引入视频 */}
+              {item.video && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold mb-4">Introduction Video</h3>
+                  <div className="aspect-video w-full overflow-hidden rounded-lg bg-black">
+                    <video
+                      src={item.video}
+                      className="w-full h-full object-contain"
+                      controls
+                      preload="metadata"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              )}
+              
               {/* MUN提案摘要 */}
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-4">MUN Proposal Summary</h3>
