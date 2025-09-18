@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "background": "Background",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "A Name, A Chance: Exploring Refugee Issues Through Research and Stories",
+    "description": "This website showcases my research and creative work on Myanmar refugees and related international issues, aiming to raise awareness about global refugee challenges through the integration of academic and artistic approaches.",
+    "browsePortfolio": "Browse Portfolio",
+    "researchBackground": "Research Background",
+    "categories": {
+      "research": "Research Papers",
+      "visual": "Visual Works",
+      "multimedia": "Multimedia"
+    },
+    "subcategories": {
+      "independentResearch": "Independent Research",
+      "handbook": "Handbook",
+      "munProposal": "MUN Proposal"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "all": "All",
+    "research": "Research",
+    "visual": "Visual",
+    "multimedia": "Multimedia"
+  },
+  "projects": {
+    "researchReport": {
+      "title": "Research Report: Challenges and Reasons for Myanmar Refugees in Thailand in Employment",
+      "summary": "In-depth analysis of employment challenges faced by 3.33 million Myanmar refugees in Thailand, exploring informal employment, systematic exploitation, and identity restrictions."
+    },
+    "handbook": {
+      "title": "Handbook: Refugee Employment, Education and Medication Guide",
+      "summary": "Comprehensive visual guide for refugee employment assistance, covering legal rights, job search strategies, and community resources."
+    },
+    "munProposal": {
+      "title": "MUN Proposal: Rohingya Crisis Proposal",
+      "summary": "A comprehensive MUN proposal addressing the Rohingya refugee crisis, focusing on international cooperation and sustainable solutions for refugee protection and resettlement."
+    },
+    "rohingyaStudy": {
+      "title": "Background Research: A Case Study on Rohingya Refugee",
+      "summary": "A comprehensive case study examining the Rohingya refugee crisis, focusing on their displacement, challenges, and the broader context of Myanmar refugee issues."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 A Name, A Chance",
+    "contact": "Contact",
+    "unhcr": "UNHCR Official Website"
+  }
+}

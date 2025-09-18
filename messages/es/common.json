@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "about": "Acerca de",
+    "background": "Antecedentes",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Un Nombre, Una Oportunidad: Explorando los Problemas de los Refugiados a través de la Investigación y las Historias",
+    "description": "Este sitio web muestra mi trabajo de investigación y creativo sobre los refugiados de Myanmar y temas internacionales relacionados, con el objetivo de crear conciencia sobre los desafíos globales de los refugiados a través de la integración de enfoques académicos y artísticos.",
+    "browsePortfolio": "Explorar Portafolio",
+    "researchBackground": "Antecedentes de Investigación",
+    "categories": {
+      "research": "Documentos de Investigación",
+      "visual": "Trabajos Visuales",
+      "multimedia": "Multimedia"
+    },
+    "subcategories": {
+      "independentResearch": "Investigación Independiente",
+      "handbook": "Manual",
+      "munProposal": "Propuesta MUN"
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "all": "Todos",
+    "research": "Investigación",
+    "visual": "Visual",
+    "multimedia": "Multimedia"
+  },
+  "projects": {
+    "researchReport": {
+      "title": "Informe de Investigación: Desafíos y Razones para los Refugiados de Myanmar en Tailandia en el Empleo",
+      "summary": "Análisis profundo de los desafíos de empleo que enfrentan 3.33 millones de refugiados de Myanmar en Tailandia, explorando el empleo informal, la explotación sistemática y las restricciones de identidad."
+    },
+    "handbook": {
+      "title": "Manual: Guía de Empleo, Educación y Medicamentos para Refugiados",
+      "summary": "Guía visual integral para la asistencia de empleo de refugiados, que cubre derechos legales, estrategias de búsqueda de empleo y recursos comunitarios."
+    },
+    "munProposal": {
+      "title": "Propuesta MUN: Propuesta de Crisis de Rohingya",
+      "summary": "Una propuesta MUN integral que aborda la crisis de refugiados rohingya, enfocándose en la cooperación internacional y soluciones sostenibles para la protección y reasentamiento de refugiados."
+    },
+    "rohingyaStudy": {
+      "title": "Investigación de Antecedentes: Un Estudio de Caso sobre Refugiados Rohingya",
+      "summary": "Un estudio de caso integral que examina la crisis de refugiados rohingya, enfocándose en su desplazamiento, desafíos y el contexto más amplio de los problemas de refugiados de Myanmar."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Un Nombre, Una Oportunidad",
+    "contact": "Contacto",
+    "unhcr": "Sitio Web Oficial de ACNUR"
+  }
+}

@@ -3,11 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { useLanguage } from '@/contexts/LanguageContext';
 import { portfolio } from "@/data/portfolio";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   const categoriesRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   const scrollToCategories = () => {
     categoriesRef.current?.scrollIntoView({ 
@@ -24,17 +26,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative px-8 py-24 sm:px-12 sm:py-28 lg:px-16 lg:py-32">
           <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight max-w-3xl">
-            A Name, A Chance: Exploring Refugee Issues Through Research and Stories
+            {t('home.title')}
           </h1>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-blue-50">
-            This website showcases my research and creative work on Myanmar refugees and related international issues, aiming to raise awareness about global refugee challenges through the integration of academic and artistic approaches.
+            {t('home.description')}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/portfolio" className="inline-flex items-center rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-              Browse Portfolio
+              {t('home.browsePortfolio')}
             </Link>
             <Link href="/background" className="inline-flex items-center rounded-md bg-white/10 px-4 py-2 text-white hover:bg-white/20">
-              Research Background
+              {t('home.researchBackground')}
             </Link>
           </div>
           
@@ -74,8 +76,8 @@ export default function Home() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-medium text-slate-800">Research Papers</h3>
-            <p className="mt-2 text-sm text-slate-600">Independent Research</p>
+            <h3 className="text-lg font-medium text-slate-800">{t('home.categories.research')}</h3>
+            <p className="mt-2 text-sm text-slate-600">{t('home.subcategories.independentResearch')}</p>
             <p className="mt-3 text-sm text-slate-500 leading-relaxed">
               {portfolio.find(p => p.slug === "research-report-employment-challenges")?.summary}
             </p>
@@ -91,8 +93,8 @@ export default function Home() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-medium text-slate-800">Visual Works</h3>
-            <p className="mt-2 text-sm text-slate-600">Handbook</p>
+            <h3 className="text-lg font-medium text-slate-800">{t('home.categories.visual')}</h3>
+            <p className="mt-2 text-sm text-slate-600">{t('home.subcategories.handbook')}</p>
             <p className="mt-3 text-sm text-slate-500 leading-relaxed">
               {portfolio.find(p => p.slug === "handbook-visual-guide")?.summary}
             </p>
@@ -108,8 +110,8 @@ export default function Home() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-medium text-slate-800">Multimedia</h3>
-            <p className="mt-2 text-sm text-slate-600">MUN Proposal</p>
+            <h3 className="text-lg font-medium text-slate-800">{t('home.categories.multimedia')}</h3>
+            <p className="mt-2 text-sm text-slate-600">{t('home.subcategories.munProposal')}</p>
             <p className="mt-3 text-sm text-slate-500 leading-relaxed">
               {portfolio.find(p => p.slug === "mun-proposal")?.summary}
             </p>

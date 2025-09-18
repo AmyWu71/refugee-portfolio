@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "首页",
+    "portfolio": "作品集",
+    "about": "关于",
+    "background": "背景",
+    "contact": "联系"
+  },
+  "home": {
+    "title": "一个名字，一个机会：通过研究和故事探索难民问题",
+    "description": "本网站展示了我关于缅甸难民及相关国际议题的研究与创作，旨在通过学术与艺术的结合，引发更多对全球难民问题的关注。",
+    "browsePortfolio": "浏览作品集",
+    "researchBackground": "研究背景",
+    "categories": {
+      "research": "研究论文",
+      "visual": "视觉作品",
+      "multimedia": "多媒体"
+    },
+    "subcategories": {
+      "independentResearch": "独立研究",
+      "handbook": "手册",
+      "munProposal": "模联提案"
+    }
+  },
+  "portfolio": {
+    "title": "作品集",
+    "all": "全部",
+    "research": "研究",
+    "visual": "视觉",
+    "multimedia": "多媒体"
+  },
+  "projects": {
+    "researchReport": {
+      "title": "研究报告：缅甸难民在泰国就业面临的挑战和原因",
+      "summary": "深入分析泰国333万缅甸难民面临的就业挑战，探讨非正式就业、系统性剥削和身份限制等问题。"
+    },
+    "handbook": {
+      "title": "手册：难民就业、教育和医疗指南",
+      "summary": "为难民就业援助提供全面的视觉指南，涵盖法律权利、求职策略和社区资源。"
+    },
+    "munProposal": {
+      "title": "模联提案：罗兴亚危机提案",
+      "summary": "一个全面的模联提案，解决罗兴亚难民危机，专注于国际合作和难民保护及重新安置的可持续解决方案。"
+    },
+    "rohingyaStudy": {
+      "title": "背景研究：罗兴亚难民案例研究",
+      "summary": "一个全面的案例研究，探讨罗兴亚难民危机，重点关注他们的流离失所、挑战以及缅甸难民问题的更广泛背景。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 一个名字，一个机会",
+    "contact": "联系方式",
+    "unhcr": "联合国难民署官网"
+  }
+}
