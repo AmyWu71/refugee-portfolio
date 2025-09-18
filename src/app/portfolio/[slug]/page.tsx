@@ -351,6 +351,42 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         </div>
       ) : null}
 
+      {/* 访谈内容 */}
+      {item.slug === "living-between-borders-interview" && item.interviewContent && (
+        <div className="space-y-8">
+          {/* 引言 */}
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">Introduction</h3>
+            <div className="prose max-w-none text-gray-700 leading-relaxed">
+              <p>{item.interviewContent.introduction}</p>
+            </div>
+          </div>
+
+          {/* 访谈故事1 */}
+          <div className="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">{item.interviewContent.story1.title}</h3>
+            <div className="prose max-w-none text-gray-700 leading-relaxed">
+              <p>{item.interviewContent.story1.content}</p>
+            </div>
+          </div>
+
+          {/* 访谈故事2 */}
+          <div className="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">{item.interviewContent.story2.title}</h3>
+            <div className="prose max-w-none text-gray-700 leading-relaxed">
+              <p>{item.interviewContent.story2.content}</p>
+            </div>
+          </div>
+
+          {/* 结论 */}
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+            <h3 className="text-xl font-semibold mb-4 text-blue-800">Conclusion</h3>
+            <div className="prose max-w-none text-blue-700 leading-relaxed">
+              <p>{item.interviewContent.conclusion}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
     </article>
   );
