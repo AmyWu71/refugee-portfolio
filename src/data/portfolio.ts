@@ -1,4 +1,4 @@
-export type PortfolioCategory = "research" | "visual" | "multimedia";
+export type PortfolioCategory = "research" | "visual" | "multimedia" | "interview";
 
 export interface PortfolioItem {
   slug: string;
@@ -72,6 +72,15 @@ export const portfolio: PortfolioItem[] = [
     pdf: "/Rohingya Crisis Proposal.pdf",
     video: "/25c0ca27fd47e1846bca438434e9caf5.mp4",
     reflection: "跨主体协作的可操作性与监督机制是推进的关键。",
+  },
+  {
+    slug: "living-between-borders-interview",
+    title: "Living Between Borders: Voices of NGO Leaders and Myanmar Refugees in Thailand",
+    category: "interview",
+    summary: "An in-depth interview series featuring conversations with NGO leaders and Myanmar refugees in Thailand, exploring their experiences, challenges, and perspectives on living between borders.",
+    background: "This interview project captures the authentic voices of those directly involved in the Myanmar refugee situation in Thailand, providing insights into the daily realities and systemic challenges faced by both service providers and refugees.",
+    thumbnail: "/thumbnails/interview-cover.png",
+    reflection: "通过深度访谈，我们听到了最真实的声音，这些故事比任何统计数据都更能反映难民生活的复杂性。",
   },
 ];
 
