@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section ref={categoriesRef} className="grid gap-6 sm:grid-cols-3">
+      <section ref={categoriesRef} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <Link href="/portfolio?category=research" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
           <div className="relative h-48 w-full">
             <Image
@@ -114,6 +114,23 @@ export default function Home() {
             <p className="mt-2 text-sm text-slate-600">{t('home.subcategories.munProposal')}</p>
             <p className="mt-3 text-sm text-slate-500 leading-relaxed">
               {portfolio.find(p => p.slug === "mun-proposal")?.summary}
+            </p>
+          </div>
+        </Link>
+        <Link href="/portfolio/living-between-borders-interview" className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:bg-slate-50 hover:shadow-md transition-all">
+          <div className="relative h-48 w-full">
+            <Image
+              src={portfolio.find(p => p.slug === "living-between-borders-interview")?.thumbnail || "/thumbnails/interview-cover.png"}
+              alt="Interview Cover"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg font-medium text-slate-800">{t('home.categories.interview')}</h3>
+            <p className="mt-2 text-sm text-slate-600">Living Between Borders</p>
+            <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+              {portfolio.find(p => p.slug === "living-between-borders-interview")?.summary}
             </p>
           </div>
         </Link>
