@@ -355,34 +355,50 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
       {item.slug === "living-between-borders-interview" && item.interviewContent && (
         <div className="space-y-8">
           {/* 引言 */}
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">Introduction</h3>
-            <div className="prose max-w-none text-gray-700 leading-relaxed">
-              <p>{item.interviewContent.introduction}</p>
+          <div className="bg-gray-50 p-8 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Introduction</h3>
+            <div className="text-lg text-gray-700 leading-8 space-y-4">
+              <p>As part of the research project on Myanmar refugees in Thailand, two interviews focusing on the lives of Myanmar refugees were conducted.</p>
+              <p>Thailand has been a major destination for refugees. However, numerous challenges and difficulties persist after they arrive in this new land, including legal uncertainty, language barriers, and limited access to education and employment opportunities. These problems remain unsolved, bringing a significant impact on the daily life of refugees.</p>
+              <p>In the first interview, I spoke with Moe, a young refugee student in Mae Sot. She shared her lived experiences of displacement, legal challenges, and educational limitations. Her life stands as a reflection of the harsh reality for most refugees, while some may suffer from even a severe situation.</p>
+              <p>Later, I invited Professor Hong for the second interview. Hong is a researcher and NGO practitioner who has studied refugee communities across Thailand and offered a broader socio-economic analysis of their situation. His speech offers a new perspective to the problem, showcasing not only the challenge refugees faced, but also the inefficiency of current NGOs and raise a possible solution.</p>
+              <p>Together, these perspectives highlight both the micro-level experiences of refugees and the structural barriers they face in host societies. It also offers a valuable insight that may lead to a potential solution.</p>
             </div>
           </div>
 
           {/* 访谈故事1 */}
-          <div className="bg-white border border-gray-200 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">{item.interviewContent.story1.title}</h3>
-            <div className="prose max-w-none text-gray-700 leading-relaxed">
-              <p>{item.interviewContent.story1.content}</p>
+          <div className="bg-white border border-gray-200 p-8 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">{item.interviewContent.story1.title}</h3>
+            <div className="text-lg text-gray-700 leading-8 space-y-4">
+              <p>Moe and her family fled to Thailand in 2009 and have lived in refugee camps in Thailand for more than fifteen years. Currently, she is preparing for the GED exam in Mae Sot. For her, education is her primary pathway to opportunity.</p>
+              <p>However, legal challenges stand as the biggest problem in her way. Without Thai national IDs, refugees are unable to travel freely, access higher education, or obtain formal employment. "Every time I want to leave the camp, I need permission from the refugee camp's officials," she explained, reflecting the restrictive nature of refugee life.</p>
+              <p>Basic services are also limited. Healthcare, with an increasing burden, seems to be insufficient under the subsidy of the UN. Education opportunities are limited to informal areas, which only focus on English and life skills. And such education is also proven to be not professional enough, which is taught by foreign volunteers instead of experienced scholars.</p>
+              <p>In the interview, Moe specifically mentioned language as a persistent barrier: "I can understand some Thai, but speaking is hard… It's difficult when applying to schools or jobs."</p>
+              <p>Despite these restrictions, Moe has developed practical skills through vocational courses, such as cooking, and completed an internship in a local restaurant. She also interned at an NGO supporting migrant education. She plans to return as staff in the future.</p>
+              <p>While this reveals her isolated camp life, which she mentions, "Here, I don't have many friends", she remains passionate and positive. Her determination to pursue education and change her community is clear: "If I can get a scholarship, I want to study politics at the university. That would give me a chance to build a better life for my community." She further mentions that " If I become a leader, I will create new education to get children to a better education level."</p>
             </div>
           </div>
 
           {/* 访谈故事2 */}
-          <div className="bg-white border border-gray-200 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">{item.interviewContent.story2.title}</h3>
-            <div className="prose max-w-none text-gray-700 leading-relaxed">
-              <p>{item.interviewContent.story2.content}</p>
+          <div className="bg-white border border-gray-200 p-8 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">{item.interviewContent.story2.title}</h3>
+            <div className="text-lg text-gray-700 leading-8 space-y-4">
+              <p>Complementing Moe's narratives, Hong provided a structural overview of the refugee situation in Thailand. As an important scholar in this field, he has conducted fieldwork in Bangkok and Mae Sot, observing firsthand the challenges refugees face in education, employment, and integration.</p>
+              <p>While Hong admitted that most refugees migrate for economic survival due to the political instability and conflict in Myanmar, Thailand does not provide permanent settlement or full legal protection to refugees. Stuck between, refugees are left in a state of protracted temporality.</p>
+              <p>According to Hong, language and legal status are the most significant barriers for refugees. Without documentation, they face risks of arrest, deportation, or police extortion. Even with UN registration, they are excluded from formal employment. As a result, most refugees are restricted to low-skilled jobs, such as agriculture, construction, or seafood processing, earning as little as 200 baht per day. Children earn even less. The severe poverty status results in widespread child labor and the exacerbation of early dropout rates.</p>
+              <p>While education has been thought of as an important pathway, the opportunities remain limited. Hong observed that many children marry and form families by age 14 or 15, which stop them from learning but instead working. Meanwhile, informal "learning centers" lack official recognition, leaving refugees nothing but a useless certificate. Although GED preparation programs appear to be a potential pathway to higher education abroad, these remain rare due to limited resources and the high academic demands.</p>
+              <p>Hong also mentions the harsh employment situation of refugees. While NGOs offer training in handicrafts, sewing, or cooking, market access appears to be weak and limited. Social enterprises like The Borderline provide outlets for refugee-made goods, but the scale of the enterprises remains limited. Access to banking services or microloans is often banned due to the lack of credit. Just like what Hong summarized: "Everything comes back to money—education, healthcare, entrepreneurship—it all requires funding. And refugees have none." Indeed harsh, but real.</p>
+              <p>Finally, Hong emphasized that few refugees consider Thailand a permanent home. "Every refugee I've met says the same thing," he explained. "Even those who have lived here for ten years or more—they all want to go back to Myanmar." This finding underscores the uncertain character of refugee settlement in Thailand. With both legal exclusion and enduring cultural ties to Myanmar, the future of Myanmar refugees remains uncertain.</p>
             </div>
           </div>
 
           {/* 结论 */}
-          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-            <h3 className="text-xl font-semibold mb-4 text-blue-800">Conclusion</h3>
-            <div className="prose max-w-none text-blue-700 leading-relaxed">
-              <p>{item.interviewContent.conclusion}</p>
+          <div className="bg-gray-50 p-8 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Conclusion</h3>
+            <div className="text-lg text-gray-700 leading-8 space-y-4">
+              <p>While Moe's story reveals the difficult situation of individuals and their dignity, Hong, as a scholar, provides important insight from the perspective of an NGO leader and scholar.</p>
+              <p>Together, their words underscore the urgent need for multi-level interventions: recognition of refugee status, improved access to education, and sustainable livelihood opportunities. Although systemic change remains difficult with the unchanged policy, targeted assistance—such as GED programs, microfinance, and vocational training—can provide meaningful support to light the future of refugees.</p>
+              <p>As one of the most vulnerable populations in Southeast Asia, the Myanmar refugee community in Thailand still needs more attention from the world. Their stories, both personal and collective, stand as an essential and critical factor in the resolution of the crisis.</p>
             </div>
           </div>
         </div>
