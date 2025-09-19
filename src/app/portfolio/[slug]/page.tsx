@@ -28,6 +28,9 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             <p className="mt-1 text-sm text-gray-500">By Xuanjing Wu</p>
           </>
         )}
+        {item.slug === "living-between-borders-interview" && (
+          <p className="mt-1 text-sm text-gray-500">By Xuanjing Wu</p>
+        )}
         <p className="mt-2 text-sm text-gray-400">{item.background}</p>
       </header>
 
@@ -358,7 +361,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             {/* 引言 */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">Introduction</h2>
-              <p className="text-sm text-gray-600 mb-4 italic">By Amy Wu</p>
               <p className="mb-4">As part of the research project on Myanmar refugees in Thailand, two interviews focusing on the lives of Myanmar refugees were conducted.</p>
               <p className="mb-4">Thailand has been a major destination for refugees. However, numerous challenges and difficulties persist after they arrive in this new land, including legal uncertainty, language barriers, and limited access to education and employment opportunities. These problems remain unsolved, bringing a significant impact on the daily life of refugees.</p>
               <p className="mb-4">In the first interview, I spoke with Moe, a young refugee student in Mae Sot. She shared the challenges she has faced due to displacement, legal challenges, and educational limitations. Her life stands as a reflection of the harsh reality for most refugees, while some may suffer from even a severe situation.</p>
@@ -369,7 +371,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             {/* 访谈故事1 */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">{item.interviewContent.story1.title}</h2>
-              <p className="text-sm text-gray-600 mb-4 italic">By Amy Wu</p>
               <p className="mb-4">Moe and her family fled to Thailand in 2009 and have lived in refugee camps in Thailand for more than fifteen years. Currently, she is preparing for the GED exam in Mae Sot. For her, education is her primary pathway to opportunity.</p>
               <p className="mb-4">However, legal challenges stand as the biggest problem in her way. Without Thai national IDs, refugees are unable to travel freely, access higher education, or obtain formal employment. "Every time I want to leave the camp, I need permission from the refugee camp's officials," she explained, reflecting the restrictive nature of refugee life.</p>
               <p className="mb-4">Basic services are also limited. Healthcare, with an increasing burden, seems to be insufficient under the subsidy of the UN. Education opportunities are limited to informal areas, which only focus on English and life skills. And such education is also proven to be not professional enough, which is taught by foreign volunteers instead of experienced scholars.</p>
@@ -381,7 +382,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             {/* 访谈故事2 */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">{item.interviewContent.story2.title}</h2>
-              <p className="text-sm text-gray-600 mb-4 italic">By Amy Wu</p>
               <p className="mb-4">Complementing Moe's narratives, Hong provided a structural overview of the refugee situation in Thailand. As an important scholar in this field, he has conducted fieldwork in Bangkok and Mae Sot, observing firsthand the challenges refugees face in education, employment, and integration.</p>
               <p className="mb-4">While Hong admitted that most refugees migrate for economic survival due to the political instability and conflict in Myanmar, Thailand does not provide permanent settlement or full legal protection to refugees. Stuck between, refugees are left in a state of protracted temporality.</p>
               <p className="mb-4">According to Hong, language and legal status are the most significant barriers for refugees. Without documentation, they face risks of arrest, deportation, or police extortion. Even with UN registration, they are excluded from formal employment. As a result, most refugees are restricted to low-skilled jobs, such as agriculture, construction, or seafood processing, earning as little as 200 baht per day. For children who work at a young age, they earn even less. The severe poverty status results in widespread child labor and the exacerbation of early dropout rates.</p>
@@ -393,7 +393,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             {/* 结论 */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">Conclusion</h2>
-              <p className="text-sm text-gray-600 mb-4 italic">By Amy Wu</p>
               <p className="mb-4">While Moe's story reveals the difficult situation of individuals and their dignity, Hong, as a scholar, provides important insight from the perspective of an NGO leader and scholar.</p>
               <p className="mb-4">Together, their words underscore the urgent need for multi-level interventions: recognition of refugee status, improved access to education, and sustainable livelihood opportunities. Although systemic change remains difficult with the unchanged policy, targeted assistance—such as GED programs, microfinance, and vocational training—can provide meaningful support to light the future of refugees.</p>
               <p className="mb-6">As one of the most vulnerable populations in Southeast Asia, the Myanmar refugee community in Thailand still needs more attention from the world. Their stories, both personal and collective, stand as an essential and critical factor in the resolution of the crisis.</p>
