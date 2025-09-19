@@ -8,6 +8,7 @@ export interface PortfolioItem {
   background: string;
   thumbnail: string;
   images?: string[];
+  physicalImages?: string[];
   pdf?: string;
   pdfs?: string[];
   video?: string;
@@ -71,6 +72,11 @@ export const portfolio: PortfolioItem[] = [
       "/images/handbook/截屏2025-09-15 20.04.10.png",
       "/images/handbook/截屏2025-09-15 20.04.20.png",
       "/images/handbook/截屏2025-09-15 20.04.26.png"
+    ],
+    physicalImages: [
+      "/handbook-physical-1.png",
+      "/handbook-physical-2.jpg",
+      "/handbook-physical-3.jpg"
     ],
     reflection: "通过视觉化设计让复杂的法律条文和就业信息变得易于理解和操作。",
   },

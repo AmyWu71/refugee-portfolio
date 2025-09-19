@@ -53,6 +53,14 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         )
       ) : null}
 
+      {/* 实物展示 */}
+      {item.slug === "handbook-visual-guide" && item.physicalImages?.length && (
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-gray-800">Physical Handbook Display</h3>
+          <ImageCarousel images={item.physicalImages} alt="Physical Handbook" />
+        </div>
+      )}
+
       {item.pdf || item.pdfs ? (
         <div className="space-y-4">
           
