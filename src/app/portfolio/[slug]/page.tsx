@@ -53,13 +53,6 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         )
       ) : null}
 
-      {/* 实物展示 */}
-      {item.slug === "handbook-visual-guide" && item.physicalImages?.length && (
-        <div className="space-y-4">
-          <h3 className="text-xl font-semibold text-gray-800">Physical Handbook Display</h3>
-          <ImageCarousel images={item.physicalImages} alt="Physical Handbook" />
-        </div>
-      )}
 
       {item.pdf || item.pdfs ? (
         <div className="space-y-4">
@@ -411,6 +404,14 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               <p className="mb-6">As one of the most vulnerable populations in Southeast Asia, the Myanmar refugee community in Thailand still needs more attention from the world. Their stories, both personal and collective, stand as an essential and critical factor in the resolution of the crisis.</p>
             </section>
           </article>
+        </div>
+      )}
+
+      {/* 实物展示 - 放在页面最后 */}
+      {item.slug === "handbook-visual-guide" && item.physicalImages?.length && (
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-gray-800">Physical Handbook Display</h3>
+          <ImageCarousel images={item.physicalImages} alt="Physical Handbook" />
         </div>
       )}
 
