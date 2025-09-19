@@ -420,9 +420,14 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
 
               {activeTab === 'transcript' && item.interviewContent.story1.transcript && (
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <div className="whitespace-pre-line text-sm leading-relaxed">
-                    {item.interviewContent.story1.transcript}
-                  </div>
+                  <div 
+                    className="whitespace-pre-line leading-relaxed"
+                    style={{fontSize: '14pt', fontFamily: 'Times New Roman, serif'}}
+                    dangerouslySetInnerHTML={{
+                      __html: item.interviewContent.story1.transcript
+                        .replace(/(Amy:|Moe:)/g, '<strong>$1</strong>')
+                    }}
+                  />
                 </div>
               )}
             </section>
