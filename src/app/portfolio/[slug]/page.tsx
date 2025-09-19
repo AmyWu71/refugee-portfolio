@@ -353,11 +353,11 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
 
       {/* 访谈内容 */}
       {item.slug === "living-between-borders-interview" && item.interviewContent && (
-        <div className="space-y-8">
+        <div className="max-w-4xl mx-auto space-y-6">
           {/* 引言 */}
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Introduction</h3>
-            <div className="text-lg text-gray-700 leading-8 space-y-4">
+          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 font-serif">Introduction</h3>
+            <div className="text-sm text-gray-700 leading-relaxed space-y-3 font-serif" style={{fontFamily: 'Times New Roman, serif', fontSize: '12pt', lineHeight: '1.5'}}>
               <p>As part of the research project on Myanmar refugees in Thailand, two interviews focusing on the lives of Myanmar refugees were conducted.</p>
               <p>Thailand has been a major destination for refugees. However, numerous challenges and difficulties persist after they arrive in this new land, including legal uncertainty, language barriers, and limited access to education and employment opportunities. These problems remain unsolved, bringing a significant impact on the daily life of refugees.</p>
               <p>In the first interview, I spoke with Moe, a young refugee student in Mae Sot. She shared her lived experiences of displacement, legal challenges, and educational limitations. Her life stands as a reflection of the harsh reality for most refugees, while some may suffer from even a severe situation.</p>
@@ -367,9 +367,9 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           </div>
 
           {/* 访谈故事1 */}
-          <div className="bg-white border border-gray-200 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">{item.interviewContent.story1.title}</h3>
-            <div className="text-lg text-gray-700 leading-8 space-y-4">
+          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 font-serif">{item.interviewContent.story1.title}</h3>
+            <div className="text-sm text-gray-700 leading-relaxed space-y-3 font-serif" style={{fontFamily: 'Times New Roman, serif', fontSize: '12pt', lineHeight: '1.5'}}>
               <p>Moe and her family fled to Thailand in 2009 and have lived in refugee camps in Thailand for more than fifteen years. Currently, she is preparing for the GED exam in Mae Sot. For her, education is her primary pathway to opportunity.</p>
               <p>However, legal challenges stand as the biggest problem in her way. Without Thai national IDs, refugees are unable to travel freely, access higher education, or obtain formal employment. "Every time I want to leave the camp, I need permission from the refugee camp's officials," she explained, reflecting the restrictive nature of refugee life.</p>
               <p>Basic services are also limited. Healthcare, with an increasing burden, seems to be insufficient under the subsidy of the UN. Education opportunities are limited to informal areas, which only focus on English and life skills. And such education is also proven to be not professional enough, which is taught by foreign volunteers instead of experienced scholars.</p>
@@ -380,9 +380,9 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           </div>
 
           {/* 访谈故事2 */}
-          <div className="bg-white border border-gray-200 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">{item.interviewContent.story2.title}</h3>
-            <div className="text-lg text-gray-700 leading-8 space-y-4">
+          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 font-serif">{item.interviewContent.story2.title}</h3>
+            <div className="text-sm text-gray-700 leading-relaxed space-y-3 font-serif" style={{fontFamily: 'Times New Roman, serif', fontSize: '12pt', lineHeight: '1.5'}}>
               <p>Complementing Moe's narratives, Hong provided a structural overview of the refugee situation in Thailand. As an important scholar in this field, he has conducted fieldwork in Bangkok and Mae Sot, observing firsthand the challenges refugees face in education, employment, and integration.</p>
               <p>While Hong admitted that most refugees migrate for economic survival due to the political instability and conflict in Myanmar, Thailand does not provide permanent settlement or full legal protection to refugees. Stuck between, refugees are left in a state of protracted temporality.</p>
               <p>According to Hong, language and legal status are the most significant barriers for refugees. Without documentation, they face risks of arrest, deportation, or police extortion. Even with UN registration, they are excluded from formal employment. As a result, most refugees are restricted to low-skilled jobs, such as agriculture, construction, or seafood processing, earning as little as 200 baht per day. Children earn even less. The severe poverty status results in widespread child labor and the exacerbation of early dropout rates.</p>
@@ -393,9 +393,9 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           </div>
 
           {/* 结论 */}
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Conclusion</h3>
-            <div className="text-lg text-gray-700 leading-8 space-y-4">
+          <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 font-serif">Conclusion</h3>
+            <div className="text-sm text-gray-700 leading-relaxed space-y-3 font-serif" style={{fontFamily: 'Times New Roman, serif', fontSize: '12pt', lineHeight: '1.5'}}>
               <p>While Moe's story reveals the difficult situation of individuals and their dignity, Hong, as a scholar, provides important insight from the perspective of an NGO leader and scholar.</p>
               <p>Together, their words underscore the urgent need for multi-level interventions: recognition of refugee status, improved access to education, and sustainable livelihood opportunities. Although systemic change remains difficult with the unchanged policy, targeted assistance—such as GED programs, microfinance, and vocational training—can provide meaningful support to light the future of refugees.</p>
               <p>As one of the most vulnerable populations in Southeast Asia, the Myanmar refugee community in Thailand still needs more attention from the world. Their stories, both personal and collective, stand as an essential and critical factor in the resolution of the crisis.</p>

@@ -19,7 +19,8 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   };
 
   const prevImage = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex(
+      (prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
