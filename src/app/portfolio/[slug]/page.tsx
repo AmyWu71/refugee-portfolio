@@ -1,16 +1,18 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { useState, use } from "react";
 import { portfolio } from "@/data/portfolio";
 import ImageCarousel from "@/components/ImageCarousel";
 
-export async function generateStaticParams() {
-  return portfolio.map((p) => ({ slug: p.slug }));
-}
-
-export default async function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   const item = portfolio.find((p) => p.slug === slug);
   if (!item) return notFound();
+
+  // State for interview tab selection
+  const [activeTab, setActiveTab] = useState<'summary' | 'transcript'>('summary');
 
   return (
     <article className="space-y-6">
@@ -377,12 +379,52 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             {/* 访谈故事1 */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">{item.interviewContent.story1.title}</h2>
-              <p className="mb-4">Moe and her family fled to Thailand in 2009 and have lived in refugee camps in Thailand for more than fifteen years. Currently, she is preparing for the GED exam in Mae Sot. For her, education is her primary pathway to opportunity.</p>
-              <p className="mb-4">However, legal challenges stand as the biggest problem in her way. Without Thai national IDs, refugees are unable to travel freely, access higher education, or obtain formal employment. "Every time I want to leave the camp, I need permission from the refugee camp's officials," she explained, reflecting the restrictive nature of refugee life.</p>
-              <p className="mb-4">Basic services are also limited. Healthcare, with an increasing burden, seems to be insufficient under the subsidy of the UN. Education opportunities are limited to informal areas, which only focus on English and life skills. And such education is also proven to be not professional enough, which is taught by foreign volunteers instead of experienced scholars.</p>
-              <p className="mb-4">In the interview, Moe specifically mentioned language as a persistent barrier: "I can understand some Thai, but speaking is hard… It's difficult when applying to schools or jobs."</p>
-              <p className="mb-4">Despite these restrictions, Moe has developed practical skills through vocational courses, such as cooking, and completed an internship in a local restaurant. She also interned at an NGO supporting migrant education. She plans to return as staff in the future.</p>
-              <p className="mb-6">While this reveals her isolated camp life, which she mentions, "Here, I don't have many friends", she remains passionate and positive. Her determination to pursue education and change her community is clear: "If I can get a scholarship, I want to study politics at the university. That would give me a chance to build a better life for my community." She further mentions that " If I become a leader, I will create new education to get children to a better education level."</p>
+              
+              {/* Tab Selector */}
+              <div className="mb-6">
+                <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg w-fit">
+                  <button
+                    onClick={() => setActiveTab('summary')}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      activeTab === 'summary'
+                        ? 'bg-white text-gray-900 shadow-sm'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    Summary
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('transcript')}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      activeTab === 'transcript'
+                        ? 'bg-white text-gray-900 shadow-sm'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    Full Transcript
+                  </button>
+                </div>
+              </div>
+
+              {/* Tab Content */}
+              {activeTab === 'summary' && (
+                <div>
+                  <p className="mb-4">Moe and her family fled to Thailand in 2009 and have lived in refugee camps in Thailand for more than fifteen years. Currently, she is preparing for the GED exam in Mae Sot. For her, education is her primary pathway to opportunity.</p>
+                  <p className="mb-4">However, legal challenges stand as the biggest problem in her way. Without Thai national IDs, refugees are unable to travel freely, access higher education, or obtain formal employment. "Every time I want to leave the camp, I need permission from the refugee camp's officials," she explained, reflecting the restrictive nature of refugee life.</p>
+                  <p className="mb-4">Basic services are also limited. Healthcare, with an increasing burden, seems to be insufficient under the subsidy of the UN. Education opportunities are limited to informal areas, which only focus on English and life skills. And such education is also proven to be not professional enough, which is taught by foreign volunteers instead of experienced scholars.</p>
+                  <p className="mb-4">In the interview, Moe specifically mentioned language as a persistent barrier: "I can understand some Thai, but speaking is hard… It's difficult when applying to schools or jobs."</p>
+                  <p className="mb-4">Despite these restrictions, Moe has developed practical skills through vocational courses, such as cooking, and completed an internship in a local restaurant. She also interned at an NGO supporting migrant education. She plans to return as staff in the future.</p>
+                  <p className="mb-6">While this reveals her isolated camp life, which she mentions, "Here, I don't have many friends", she remains passionate and positive. Her determination to pursue education and change her community is clear: "If I can get a scholarship, I want to study politics at the university. That would give me a chance to build a better life for my community." She further mentions that " If I become a leader, I will create new education to get children to a better education level."</p>
+                </div>
+              )}
+
+              {activeTab === 'transcript' && item.interviewContent.story1.transcript && (
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <div className="whitespace-pre-line text-sm leading-relaxed">
+                    {item.interviewContent.story1.transcript}
+                  </div>
+                </div>
+              )}
             </section>
 
             {/* 访谈故事2 */}
