@@ -30,11 +30,13 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         )}
         {item.slug === "living-between-borders-interview" && (
           <>
-            <p className="mt-2 text-sm text-gray-500">{item.summary}</p>
+            <p className="mt-2 text-sm text-gray-400">{item.background}</p>
             <p className="mt-1 text-sm text-gray-500">By Xuanjing Wu</p>
           </>
         )}
-        <p className="mt-2 text-sm text-gray-400">{item.background}</p>
+        {item.slug !== "living-between-borders-interview" && (
+          <p className="mt-2 text-sm text-gray-400">{item.background}</p>
+        )}
       </header>
 
       {item.images?.length ? (
