@@ -354,7 +354,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
       {/* 访谈内容 */}
       {item.slug === "living-between-borders-interview" && item.interviewContent && (
         <div className="max-w-4xl mx-auto">
-          <article className="prose prose-lg max-w-none" style={{fontFamily: 'Times New Roman, serif', fontSize: '12pt', lineHeight: '1.5'}}>
+          <article className="prose prose-lg max-w-none" style={{fontFamily: 'Times New Roman, serif', fontSize: '14pt', lineHeight: '1.5'}}>
             {/* 引言 */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">Introduction</h2>
