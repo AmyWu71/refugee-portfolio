@@ -117,17 +117,17 @@ export default function AboutPage() {
               <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">{t('about.personalStatement')}</h2>
               <div className="text-center space-y-4">
                 <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-                  "{t('about.personalStatement1')}"
+                  &ldquo;{t('about.personalStatement1')}&rdquo;
                 </blockquote>
                 <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-                  "{t('about.personalStatement2')}"
+                  &ldquo;{t('about.personalStatement2')}&rdquo;
                 </blockquote>
                 <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-                  "{t('about.personalStatement3')}"
+                  &ldquo;{t('about.personalStatement3')}&rdquo;
                 </blockquote>
                 <div className="pt-4 border-t border-blue-200">
                   <p className="text-xl font-bold text-blue-800">
-                    "{t('about.personalStatement4')}"
+                    &ldquo;{t('about.personalStatement4')}&rdquo;
                   </p>
                 </div>
               </div>

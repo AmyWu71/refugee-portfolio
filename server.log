@@ -1541,3 +1541,23 @@ Import trace for requested module:
  GET /background 200 in 463ms
  ✓ Compiled in 796ms (1051 modules)
  GET /background 200 in 111ms
+ ✓ Compiled in 2.5s (1051 modules)
+ GET /background 200 in 122ms
+ ✓ Compiled in 5.9s (1051 modules)
+ GET /background 200 in 326ms
+ ✓ Compiled in 386ms (429 modules)
+ GET /background 200 in 56ms
+ GET / 200 in 84ms
+ ✓ Compiled in 1304ms (1051 modules)
+ GET /portfolio 200 in 1582ms
+ GET /portfolio 200 in 84ms
+ GET /about 200 in 64ms
+ GET /background 200 in 83ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 3.8s (627 modules)
+ GET /contact 200 in 781ms
+ GET /contact 200 in 2839ms
+ GET /contact 200 in 4173ms
+ GET /contact 200 in 69ms
+ GET / 200 in 199ms
+ GET /portfolio 200 in 55ms

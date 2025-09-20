@@ -9,12 +9,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const item = portfolio.find((p) => p.slug === slug);
-  if (!item) return notFound();
   const { t } = useLanguage();
-
+  
   // State for interview tab selection
   const [activeTab, setActiveTab] = useState<'summary' | 'transcript'>('summary');
+  
+  const item = portfolio.find((p) => p.slug === slug);
+  if (!item) return notFound();
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">

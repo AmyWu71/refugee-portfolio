@@ -103,7 +103,7 @@ export default function ContactPage() {
                 <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="https://jrs.net/en/country/thailand/" target="_blank" rel="noreferrer">JRS (UEP)</a> - 0643248478</li>
                 <li>Bangkok Refugee Centre (BRC) - 091-196-4064</li>
                 <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="https://beamedu.org/" target="_blank" rel="noreferrer">BEAM Education Foundation</a> - +66 (53) 200 024</li>
-                <li>Good Shepherd's Language School - 085-908-6560, thegoodshepard@gmail.com</li>
+                <li>Good Shepherd&apos;s Language School - 085-908-6560, thegoodshepard@gmail.com</li>
                 <li>Creative Life Foundation - creativelifethailand@gmail.com</li>
                 <li>Asylum Access Thailand (AAT) - 094-498-2500, thailand@asylumaccess.org</li>
               </ul>
