@@ -88,7 +88,7 @@ export default function ContactPage() {
             onClick={() => toggleSection('education')}
             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-blue-50 transition-colors"
           >
-            <h3 className="text-md font-medium text-gray-800">Education</h3>
+            <h3 className="text-md font-medium text-gray-800">{t('contact.education')}</h3>
             <svg 
               className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections.education ? 'rotate-180' : ''}`}
               fill="none" 
@@ -118,7 +118,7 @@ export default function ContactPage() {
             onClick={() => toggleSection('healthcare-education')}
             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-blue-50 transition-colors"
           >
-            <h3 className="text-md font-medium text-gray-800">Healthcare Training Program</h3>
+            <h3 className="text-md font-medium text-gray-800">{t('contact.healthcareTrainingProgram')}</h3>
             <svg 
               className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections['healthcare-education'] ? 'rotate-180' : ''}`}
               fill="none" 
@@ -148,7 +148,7 @@ export default function ContactPage() {
             onClick={() => toggleSection('healthcare-services')}
             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-blue-50 transition-colors"
           >
-            <h3 className="text-md font-medium text-gray-800">Healthcare Services</h3>
+            <h3 className="text-md font-medium text-gray-800">{t('contact.healthcareServices')}</h3>
             <svg 
               className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections['healthcare-services'] ? 'rotate-180' : ''}`}
               fill="none" 
@@ -177,7 +177,7 @@ export default function ContactPage() {
             onClick={() => toggleSection('unhcr-partnerships')}
             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-blue-50 transition-colors"
           >
-            <h3 className="text-md font-medium text-gray-800">UNHCR & Partnerships</h3>
+            <h3 className="text-md font-medium text-gray-800">{t('contact.unhcrPartnerships')}</h3>
             <svg 
               className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections['unhcr-partnerships'] ? 'rotate-180' : ''}`}
               fill="none" 
@@ -204,7 +204,7 @@ export default function ContactPage() {
             onClick={() => toggleSection('ged-info')}
             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-blue-50 transition-colors"
           >
-            <h3 className="text-md font-medium text-gray-800">GED (General Equivalency Diploma) Information</h3>
+            <h3 className="text-md font-medium text-gray-800">{t('contact.gedInformation')}</h3>
             <svg 
               className={`w-5 h-5 text-gray-500 transition-transform ${expandedSections['ged-info'] ? 'rotate-180' : ''}`}
               fill="none" 
