@@ -46,7 +46,8 @@ export default function ContactPage() {
         <p className="text-sm text-gray-500 mb-4">{t('contact.downloadInstruction')}</p>
         <ul className="list-disc pl-5 text-sm text-gray-700 space-y-1">
           <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/HIR-Xuanjing, Wu.pdf" download>{t('contact.backgroundResearch')}</a></li>
-          <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/pdfs/research-report-employment-challenges.pdf" download>{t('contact.researchReport')}</a></li>
+          <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/pdfs/research-report-employment-challenges.pdf" download>{t('contact.researchReport')} - {t('portfolio.researchReport.chineseVersion')}</a></li>
+          <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/research-report-english.pdf" download>{t('contact.researchReport')} - {t('portfolio.researchReport.englishVersion')}</a></li>
           <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/handbook.pdf" download>{t('contact.handbook')}</a></li>
           <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/Rohingya Crisis Proposal.pdf" download>{t('contact.munProposal')}</a></li>
           <li><a className="text-slate-800 hover:text-blue-500 hover:underline transition-colors" href="/interview-transcript.pdf" download>{t('contact.interviewTranscript')}</a></li>

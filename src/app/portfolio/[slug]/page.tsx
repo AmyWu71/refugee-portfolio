@@ -14,6 +14,9 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
   // State for interview tab selection
   const [activeTab, setActiveTab] = useState<'summary' | 'transcript'>('summary');
   
+  // State for PDF language selection
+  const [selectedPdfLanguage, setSelectedPdfLanguage] = useState<'chinese' | 'english'>('chinese');
+  
   const item = portfolio.find((p) => p.slug === slug);
   if (!item) return notFound();
 
@@ -176,20 +179,20 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
               
               {/* 研究报告下载按钮 */}
               <div className="flex flex-wrap gap-4 mb-6">
-                {(item.pdfs || [item.pdf]).map((pdf, index) => (
+                {(item.pdfs || [{ url: item.pdf, language: 'default', titleKey: 'portfolio.common.pdf' }]).map((pdf, index) => (
                   <div key={index} className="flex gap-2">
                     <a
-                      href={pdf}
+                      href={pdf.url}
                       download
                       className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
                     >
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
-{t('portfolio.common.downloadPdf')} {item.pdfs && item.pdfs.length > 1 ? index + 1 : ''}
+                      {t('portfolio.common.downloadPdf')} - {t(pdf.titleKey)}
                     </a>
                     <a
-                      href={pdf}
+                      href={pdf.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
@@ -197,7 +200,7 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-    {t('portfolio.common.openInNewWindow')}
+                      {t('portfolio.common.openInNewWindow')}
                     </a>
                   </div>
                 ))}
@@ -205,12 +208,36 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
               
               {/* 研究报告PDF查看器 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-gray-100 px-4 py-3 border-b">
+                <div className="bg-gray-100 px-4 py-3 border-b flex justify-between items-center">
                   <h3 className="text-lg font-semibold text-gray-800">{t('portfolio.researchReport.viewCompleteReport')}</h3>
+                  {item.pdfs && item.pdfs.length > 1 && (
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setSelectedPdfLanguage('chinese')}
+                        className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                          selectedPdfLanguage === 'chinese'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                      >
+                        {t('portfolio.researchReport.chineseVersion')}
+                      </button>
+                      <button
+                        onClick={() => setSelectedPdfLanguage('english')}
+                        className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                          selectedPdfLanguage === 'english'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                      >
+                        {t('portfolio.researchReport.englishVersion')}
+                      </button>
+                    </div>
+                  )}
                 </div>
                 <div className="h-[80vh]">
                   <iframe
-                    src={item.pdf}
+                    src={item.pdfs ? item.pdfs.find(pdf => pdf.language === selectedPdfLanguage)?.url || item.pdfs[0].url : item.pdf}
                     className="w-full h-full border-0"
                     title="Research Report PDF"
                   />

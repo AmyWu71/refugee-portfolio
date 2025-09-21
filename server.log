@@ -1806,3 +1806,233 @@ Require stack:
  GET /portfolio/research-report-employment-challenges 500 in 41ms
  ✓ Compiled in 4s (1051 modules)
  GET / 200 in 230ms
+ GET /portfolio/research-report-employment-challenges 200 in 98ms
+ ⨯ Failed to generate static paths for /portfolio/[slug]:
+[Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio/research-report-employment-challenges'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/options.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/index.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/next.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:321)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:366) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio/research-report-employment-challenges'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/options.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/index.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/next.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:321)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:366) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET /portfolio/research-report-employment-challenges 500 in 291ms
+ GET /portfolio/research-report-employment-challenges 500 in 43ms
+ ⨯ [Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio/research-report-employment-challenges'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/options.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/index.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/next.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:321)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:366) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio/research-report-employment-challenges'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/options.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/index.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/next.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:321)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:366) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET /portfolio/research-report-employment-challenges 500 in 262ms
+ GET /portfolio/research-report-employment-challenges 500 in 43ms
+ GET / 200 in 189ms
+ ⨯ [Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio/research-report-employment-challenges'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/options.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/index.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/next.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:321)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:366) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/portfolio/[slug]/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio/research-report-employment-challenges'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- /Users/wuwenzhan/Desktop/refugee/.next/server/webpack-runtime.js
+- /Users/wuwenzhan/Desktop/refugee/.next/server/app/page.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/require.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/load-components.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/utils.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/options.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/swc/index.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/config.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/next.js
+- /Users/wuwenzhan/Desktop/refugee/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:321)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:366) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET /portfolio/research-report-employment-challenges 500 in 353ms
+ GET /portfolio/research-report-employment-challenges 500 in 34ms
+[?25h

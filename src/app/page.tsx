@@ -111,7 +111,7 @@ export default function Home() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-medium text-slate-800">{t('home.categories.multimedia')}</h3>
+            <h3 className="text-lg font-medium text-slate-800">{t('home.categories.modelun')}</h3>
             <p className="mt-2 text-sm text-slate-600">{t('home.subcategories.munProposal')}</p>
             <p className="mt-3 text-sm text-slate-500 leading-relaxed">
               {t('portfolio.munProposal.summary')}

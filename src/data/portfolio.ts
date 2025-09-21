@@ -1,4 +1,4 @@
-export type PortfolioCategory = "research" | "visual" | "multimedia" | "interview";
+export type PortfolioCategory = "research" | "visual" | "modelun" | "interview";
 
 export interface PortfolioItem {
   slug: string;
@@ -10,7 +10,11 @@ export interface PortfolioItem {
   images?: string[];
   physicalImages?: string[];
   pdf?: string;
-  pdfs?: string[];
+  pdfs?: Array<{
+    url: string;
+    language: string;
+    titleKey: string;
+  }>;
   video?: string;
   reflectionKey?: string;
   interviewContent?: {
@@ -47,7 +51,18 @@ export const portfolio: PortfolioItem[] = [
     summaryKey: "portfolio.researchReport.summary",
     backgroundKey: "portfolio.researchReport.background",
     thumbnail: "/thumbnails/research-report-cover.png",
-    pdf: "/pdfs/research-report-employment-challenges.pdf",
+    pdfs: [
+      { 
+        url: "/pdfs/research-report-employment-challenges.pdf", 
+        language: "chinese", 
+        titleKey: "portfolio.researchReport.chineseVersion" 
+      },
+      { 
+        url: "/research-report-english.pdf", 
+        language: "english", 
+        titleKey: "portfolio.researchReport.englishVersion" 
+      }
+    ],
     reflectionKey: "portfolio.researchReport.reflection",
   },
   {
@@ -85,12 +100,12 @@ export const portfolio: PortfolioItem[] = [
   {
     slug: "mun-proposal",
     titleKey: "portfolio.munProposal.title",
-    category: "multimedia",
+    category: "modelun",
     summaryKey: "portfolio.munProposal.summary",
     backgroundKey: "portfolio.munProposal.background",
     thumbnail: "/mun-cover.png",
     pdf: "/Rohingya Crisis Proposal.pdf",
-    video: "/25c0ca27fd47e1846bca438434e9caf5.mp4",
+    video: "/mun-intro-video.mp4",
     reflectionKey: "portfolio.munProposal.reflection",
   },
   {

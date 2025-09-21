@@ -14,7 +14,7 @@ export default function PortfolioFilter() {
 
   useEffect(() => {
     const category = searchParams.get('category');
-    if (category && ['research', 'visual', 'multimedia', 'interview'].includes(category)) {
+    if (category && ['research', 'visual', 'modelun', 'interview'].includes(category)) {
       setSelectedCategory(category);
     }
   }, [searchParams]);
@@ -23,7 +23,7 @@ export default function PortfolioFilter() {
     { key: null, label: t('portfolio.categories.all') },
     { key: 'research', label: t('portfolio.categories.research') },
     { key: 'visual', label: t('portfolio.categories.visual') },
-    { key: 'multimedia', label: t('portfolio.categories.multimedia') },
+    { key: 'modelun', label: t('portfolio.categories.modelun') },
     { key: 'interview', label: t('portfolio.categories.interview') }
   ];
   
