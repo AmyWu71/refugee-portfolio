@@ -47,6 +47,52 @@
       "summary": "A comprehensive case study examining the Rohingya refugee crisis, focusing on their displacement, challenges, and the broader context of Myanmar refugee issues."
     }
   },
+  "portfolio": {
+    "handbook": {
+      "englishTitle": "Access Guide Education, Work, and Health for Refugees",
+      "author": "Author: Xuanjing Wu",
+      "downloadHandbook": "Download Handbook",
+      "downloadDesignIntroduction": "Download Design Overview PDF",
+      "previewDesignIntroduction": "Open in a New Window",
+      "viewDesignIntroduction": "View Design Overview",
+      "handbookDownloadsTitle": "Handbook Downloads",
+      "designOverviewTitle": "Design Overview",
+      "helpImprove": "Help Us Improve This Handbook",
+      "surveyDescription": "Your feedback is crucial for improving this handbook. Please take a moment to complete our survey and help us make this resource more helpful for refugees.",
+      "emailInstruction": "Or send your feedback directly to:",
+      "onlineSurvey": "Online Survey (English)",
+      "downloadEnglish": "Download Survey (English)",
+      "downloadMyanmar": "Download Survey (Myanmar)",
+      "designIntroduction": {
+        "title": "Design Philosophy & Process",
+        "overview": "This handbook represents a comprehensive approach to refugee assistance through thoughtful design and user-centered methodology.",
+        "principles": {
+          "title": "Design Principles",
+          "accessibility": "Universal Accessibility - Designed to be understood across language barriers and literacy levels",
+          "clarity": "Visual Clarity - Using clear icons, diagrams, and layouts to convey complex information simply",
+          "cultural": "Cultural Sensitivity - Respecting diverse backgrounds while providing practical guidance",
+          "practical": "Practical Utility - Focusing on actionable information that refugees can immediately use"
+        },
+        "process": {
+          "title": "Design Process",
+          "research": "Research Phase - Extensive interviews with refugees, NGOs, and service providers to understand real needs",
+          "iteration": "Iterative Design - Multiple rounds of testing and refinement based on user feedback",
+          "collaboration": "Collaborative Approach - Working closely with refugee communities and organizations",
+          "testing": "User Testing - Validating design decisions with actual refugee users"
+        },
+        "features": {
+          "title": "Key Design Features",
+          "multilingual": "Multilingual Support - Available in multiple languages including English, Myanmar, and Thai",
+          "visual": "Visual Hierarchy - Clear information architecture with logical flow and emphasis",
+          "interactive": "Interactive Elements - QR codes and digital resources for extended information",
+          "portable": "Portable Format - Designed for easy printing and distribution in refugee camps"
+        }
+      }
+    },
+    "common": {
+      "openInNewWindow": "Open in New Window"
+    }
+  },
   "footer": {
     "copyright": "© 2025 A Name, A Chance",
     "contact": "Contact",

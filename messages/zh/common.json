@@ -47,6 +47,52 @@
       "summary": "一个全面的案例研究，探讨罗兴亚难民危机，重点关注他们的流离失所、挑战以及缅甸难民问题的更广泛背景。"
     }
   },
+  "portfolio": {
+    "handbook": {
+      "englishTitle": "难民教育、工作和健康访问指南",
+      "author": "作者：吴宣静",
+      "downloadHandbook": "下载手册",
+      "downloadDesignIntroduction": "下载设计概览PDF",
+      "previewDesignIntroduction": "在新窗口中打开",
+      "viewDesignIntroduction": "查看设计概览",
+      "handbookDownloadsTitle": "手册下载",
+      "designOverviewTitle": "设计概览",
+      "helpImprove": "帮助我们改进这本手册",
+      "surveyDescription": "您的反馈对于改进这本手册至关重要。请花几分钟时间完成我们的调查，帮助我们使这个资源对难民更有帮助。",
+      "emailInstruction": "或者直接发送您的反馈到：",
+      "onlineSurvey": "在线调查（英文）",
+      "downloadEnglish": "下载调查（英文）",
+      "downloadMyanmar": "下载调查（缅甸语）",
+      "designIntroduction": {
+        "title": "设计理念与过程",
+        "overview": "这本手册通过深思熟虑的设计和以用户为中心的方法，代表了难民援助的综合方法。",
+        "principles": {
+          "title": "设计原则",
+          "accessibility": "普遍可访问性 - 设计为跨越语言障碍和识字水平都能理解",
+          "clarity": "视觉清晰度 - 使用清晰的图标、图表和布局来简单地传达复杂信息",
+          "cultural": "文化敏感性 - 在提供实用指导的同时尊重不同背景",
+          "practical": "实用性 - 专注于难民可以立即使用的可操作信息"
+        },
+        "process": {
+          "title": "设计过程",
+          "research": "研究阶段 - 与难民、非政府组织和服务提供者进行广泛访谈，了解真实需求",
+          "iteration": "迭代设计 - 基于用户反馈进行多轮测试和完善",
+          "collaboration": "协作方法 - 与难民社区和组织密切合作",
+          "testing": "用户测试 - 与实际难民用户验证设计决策"
+        },
+        "features": {
+          "title": "关键设计特点",
+          "multilingual": "多语言支持 - 提供英语、缅甸语和泰语等多种语言版本",
+          "visual": "视觉层次 - 清晰的信息架构，具有逻辑流程和重点强调",
+          "interactive": "交互元素 - 二维码和数字资源提供扩展信息",
+          "portable": "便携格式 - 设计为易于在难民营中打印和分发"
+        }
+      }
+    },
+    "common": {
+      "openInNewWindow": "在新窗口中打开"
+    }
+  },
   "footer": {
     "copyright": "© 2025 一个名字，一个机会",
     "contact": "联系方式",

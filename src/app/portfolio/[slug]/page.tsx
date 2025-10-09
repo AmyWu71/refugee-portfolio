@@ -69,28 +69,83 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
           {item.slug === "handbook-visual-guide" && (
             <>
               {/* Handbook下载按钮 */}
-              <div className="flex flex-wrap gap-4 mb-6">
-                <a
-                  href={item.pdf}
-                  download
-                  className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+              <div className="space-y-4 mb-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-gray-800">Handbook Downloads</h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href={item.pdf}
+                      download
+                      className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                    >
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
 {t('portfolio.handbook.downloadHandbook')}
-                </a>
-                <a
-                  href={item.pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+                    </a>
+                    <a
+                      href={item.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                    >
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
 {t('portfolio.common.openInNewWindow')}
-                </a>
+                    </a>
+                  </div>
+                </div>
+                
+                {/* 设计概览PDF */}
+                {item.pdfs && (
+                  <div>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-800">Design Overview</h3>
+                    
+                    {/* PDF查看器 */}
+                    <div className="border rounded-lg overflow-hidden mb-4">
+                      <div className="bg-gray-100 px-4 py-2 border-b">
+                        <span className="text-sm font-medium text-gray-700">Design Overview PDF</span>
+                      </div>
+                      <div className="h-96">
+                        <iframe
+                          src="/access-guide-design-introduction.pdf#toolbar=1&navpanes=1&scrollbar=1"
+                          className="w-full h-full"
+                          title="Design Overview PDF"
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* 按钮放在PDF查看器下面 */}
+                    <div className="flex flex-wrap gap-4">
+                      {item.pdfs.filter(pdf => pdf.language === 'design').map((pdf, index) => (
+                        <div key={index} className="flex flex-wrap gap-2">
+                          <a
+                            href={pdf.url}
+                            download
+                            className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                          >
+                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Download Design Overview PDF
+                          </a>
+                          <a
+                            href={pdf.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                          >
+                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Open in a New Window
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
               
               {/* Handbook问卷部分 */}
@@ -574,13 +629,6 @@ export default function PortfolioDetail({ params }: { params: Promise<{ slug: st
         </div>
       )}
 
-      {/* 实物展示 - 放在页面最后 */}
-      {item.slug === "handbook-visual-guide" && item.physicalImages?.length && (
-        <div className="space-y-4">
-          <h3 className="text-xl font-semibold text-gray-800">Physical Handbook Display</h3>
-          <ImageCarousel images={item.physicalImages} alt="Physical Handbook" />
-        </div>
-      )}
 
     </article>
     </div>

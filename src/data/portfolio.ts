@@ -14,6 +14,8 @@ export interface PortfolioItem {
     url: string;
     language: string;
     titleKey: string;
+    previewTitleKey?: string;
+    viewTitleKey?: string;
   }>;
   video?: string;
   reflectionKey?: string;
@@ -73,6 +75,20 @@ export const portfolio: PortfolioItem[] = [
     backgroundKey: "portfolio.handbook.background",
     thumbnail: "/images/handbook-cover.png",
     pdf: "/handbook.pdf",
+    pdfs: [
+      { 
+        url: "/handbook.pdf", 
+        language: "handbook", 
+        titleKey: "portfolio.handbook.downloadHandbook" 
+      },
+      { 
+        url: "/access-guide-design-introduction.pdf", 
+        language: "design", 
+        titleKey: "portfolio.handbook.downloadDesignIntroduction",
+        previewTitleKey: "portfolio.handbook.previewDesignIntroduction",
+        viewTitleKey: "portfolio.handbook.viewDesignIntroduction"
+      }
+    ],
     images: [
       "/images/handbook/截屏2025-09-15 19.59.37.png",
       "/images/handbook/截屏2025-09-15 19.59.52.png",
