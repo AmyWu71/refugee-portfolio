@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Message {
   id: string;
@@ -116,7 +115,7 @@ export default function AdminFeedbackPage() {
             ].map(({ key, label }) => (
               <button
                 key={key}
-                onClick={() => setFilter(key as any)}
+                onClick={() => setFilter(key as 'all' | 'messages' | 'questions' | 'pending' | 'approved' | 'rejected')}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   filter === key
                     ? 'bg-white text-gray-900 shadow-sm'
