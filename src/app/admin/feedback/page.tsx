@@ -19,7 +19,6 @@ interface Message {
 }
 
 export default function AdminFeedbackPage() {
-  const { t } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([]);
   const [filter, setFilter] = useState<'all' | 'messages' | 'questions' | 'pending' | 'approved' | 'rejected'>('all');
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
@@ -42,13 +41,10 @@ export default function AdminFeedbackPage() {
   });
 
   const handleStatusChange = (messageId: string, status: 'approved' | 'rejected') => {
-    setMessages(prev => prev.map(msg => 
-      msg.id === messageId ? { ...msg, status } : msg
-    ));
-    // 保存到localStorage
     const updatedMessages = messages.map(msg => 
       msg.id === messageId ? { ...msg, status } : msg
     );
+    setMessages(updatedMessages);
     localStorage.setItem('feedback-messages', JSON.stringify(updatedMessages));
   };
 

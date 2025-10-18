@@ -7,7 +7,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export default function FeedbackPage() {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<'messages' | 'questions'>('messages');
-  const [messages, setMessages] = useState<any[]>([]);
+  const [messages, setMessages] = useState<Array<{
+    id: string;
+    name: string;
+    subject: string;
+    message: string;
+    timestamp: string;
+    isAnonymous: boolean;
+    type: 'messages' | 'questions';
+  }>>([]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
