@@ -13,6 +13,7 @@ export default function Navbar() {
     { href: "/portfolio", label: t('nav.portfolio') },
     { href: "/about", label: t('nav.about') },
     { href: "/background", label: t('nav.background') },
+    { href: "/feedback", label: t('nav.feedback') },
     { href: "/contact", label: t('nav.contact') },
   ];
 

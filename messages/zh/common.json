@@ -4,6 +4,7 @@
     "portfolio": "作品集",
     "about": "关于",
     "background": "背景",
+    "feedback": "留言板",
     "contact": "联系"
   },
   "home": {
@@ -92,6 +93,38 @@
     "common": {
       "openInNewWindow": "在新窗口中打开"
     }
+  },
+  "feedback": {
+    "title": "留言板与提问",
+    "subtitle": "分享您的想法，提出问题，或与我们联系",
+    "messageBoard": "留言板",
+    "askQuestion": "提问",
+    "shareThoughts": "分享您的想法",
+    "shareDescription": "我们很乐意听到您对我们研究的想法、对网站的反馈，或任何您想与社区分享的评论。",
+    "questionDescription": "对我们的研究、方法或合作机会有具体问题吗？我们随时为您提供帮助！",
+    "directContact": "直接联系",
+    "email": "邮箱",
+    "phone": "电话",
+    "name": "姓名",
+    "category": "分类",
+    "categoryGeneral": "一般问题",
+    "categoryResearch": "研究相关",
+    "categoryTechnical": "技术问题",
+    "categoryCollaboration": "合作",
+    "categoryOther": "其他",
+    "messageSubject": "主题",
+    "questionSubject": "问题主题",
+    "messageContent": "您的留言",
+    "questionDetails": "问题详情",
+    "anonymous": "匿名发布",
+    "submit": "提交",
+    "submitting": "提交中...",
+    "submitSuccess": "谢谢！您的留言已成功提交。",
+    "submitError": "抱歉，提交留言时出现错误。请重试。",
+    "recentMessages": "最新留言",
+    "noMessages": "暂无留言。成为第一个分享想法的人！",
+    "replies": "回复",
+    "official": "官方"
   },
   "footer": {
     "copyright": "© 2025 一个名字，一个机会",
