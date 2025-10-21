@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 根据环境变量决定是否使用静态导出
-  ...(process.env.GITHUB_ACTIONS && {
+  // 只在GitHub Actions且非Vercel环境时使用静态导出
+  ...(process.env.GITHUB_ACTIONS && !process.env.VERCEL && {
     output: 'export',
     trailingSlash: true,
   }),
