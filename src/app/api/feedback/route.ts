@@ -32,7 +32,7 @@ if (feedbackMessages.length === 0) {
       isAnonymous: true,
       type: "messages",
       timestamp: "2025-10-21T04:20:00.000Z",
-      status: "pending"
+      status: "approved"
     },
     {
       id: "1761019500000",
@@ -47,6 +47,30 @@ if (feedbackMessages.length === 0) {
       status: "approved",
       reply: "感谢您的关注！我会尽快回复您的问题。",
       replyTimestamp: "2025-10-21T04:35:00.000Z"
+    },
+    {
+      id: "1761019600000",
+      name: "李四",
+      email: "lisi@example.com",
+      subject: "感谢分享",
+      message: "非常感谢您分享这个关于缅甸难民的研究，让我对这个话题有了更深的了解。",
+      category: "general",
+      isAnonymous: false,
+      type: "messages",
+      timestamp: "2025-10-21T04:40:00.000Z",
+      status: "approved"
+    },
+    {
+      id: "1761019700000",
+      name: "王五",
+      email: "wangwu@example.com",
+      subject: "垃圾留言测试",
+      message: "这是一条测试的垃圾留言。",
+      category: "other",
+      isAnonymous: false,
+      type: "messages",
+      timestamp: "2025-10-21T04:50:00.000Z",
+      status: "pending"
     }
   ];
 }
