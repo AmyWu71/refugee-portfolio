@@ -59,18 +59,6 @@ if (feedbackMessages.length === 0) {
       type: "messages",
       timestamp: "2025-10-21T04:40:00.000Z",
       status: "approved"
-    },
-    {
-      id: "1761019700000",
-      name: "王五",
-      email: "wangwu@example.com",
-      subject: "垃圾留言测试",
-      message: "这是一条测试的垃圾留言。",
-      category: "other",
-      isAnonymous: false,
-      type: "messages",
-      timestamp: "2025-10-21T04:50:00.000Z",
-      status: "pending"
     }
   ];
 }
