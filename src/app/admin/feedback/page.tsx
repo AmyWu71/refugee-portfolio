@@ -24,12 +24,19 @@ export default function AdminFeedbackPage() {
   const [replyText, setReplyText] = useState('');
   const [isReplying, setIsReplying] = useState(false);
 
-  // 模拟从localStorage加载数据
+  // 从API加载数据
   useEffect(() => {
-    const savedMessages = localStorage.getItem('feedback-messages');
-    if (savedMessages) {
-      setMessages(JSON.parse(savedMessages));
-    }
+    const loadMessages = async () => {
+      try {
+        const response = await fetch('/api/feedback');
+        const allMessages = await response.json();
+        setMessages(allMessages);
+      } catch (error) {
+        console.error('Failed to load messages:', error);
+      }
+    };
+    
+    loadMessages();
   }, []);
 
   const filteredMessages = messages.filter(msg => {
@@ -39,12 +46,28 @@ export default function AdminFeedbackPage() {
     return msg.status === filter;
   });
 
-  const handleStatusChange = (messageId: string, status: 'approved' | 'rejected') => {
-    const updatedMessages = messages.map(msg => 
-      msg.id === messageId ? { ...msg, status } : msg
-    );
-    setMessages(updatedMessages);
-    localStorage.setItem('feedback-messages', JSON.stringify(updatedMessages));
+  const handleStatusChange = async (messageId: string, status: 'approved' | 'rejected') => {
+    try {
+      const response = await fetch('/api/feedback', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: messageId,
+          status
+        })
+      });
+      
+      if (response.ok) {
+        const updatedMessage = await response.json();
+        setMessages(prev => prev.map(msg => 
+          msg.id === messageId ? updatedMessage : msg
+        ));
+      }
+    } catch (error) {
+      console.error('Failed to update status:', error);
+    }
   };
 
   const handleReply = async () => {
@@ -52,25 +75,33 @@ export default function AdminFeedbackPage() {
     
     setIsReplying(true);
     
-    // 模拟API调用
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/feedback', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: selectedMessage.id,
+          reply: replyText,
+          replyTimestamp: new Date().toISOString(),
+          status: 'approved'
+        })
+      });
+      
+      if (response.ok) {
+        const updatedMessage = await response.json();
+        setMessages(prev => prev.map(msg => 
+          msg.id === selectedMessage.id ? updatedMessage : msg
+        ));
+        
+        setReplyText('');
+        setSelectedMessage(null);
+      }
+    } catch (error) {
+      console.error('Failed to reply:', error);
+    }
     
-    const updatedMessages = messages.map(msg => 
-      msg.id === selectedMessage.id 
-        ? { 
-            ...msg, 
-            reply: replyText,
-            replyTimestamp: new Date().toISOString(),
-            status: 'approved' as const
-          } 
-        : msg
-    );
-    
-    setMessages(updatedMessages);
-    localStorage.setItem('feedback-messages', JSON.stringify(updatedMessages));
-    
-    setReplyText('');
-    setSelectedMessage(null);
     setIsReplying(false);
   };
 

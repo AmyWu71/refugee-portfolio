@@ -15,6 +15,9 @@ export default function FeedbackPage() {
     timestamp: string;
     isAnonymous: boolean;
     type: 'messages' | 'questions';
+    status?: string;
+    reply?: string;
+    replyTimestamp?: string;
   }>>([]);
   const [formData, setFormData] = useState({
     name: '',
@@ -34,43 +37,64 @@ export default function FeedbackPage() {
     "/hero-bg-5.png"
   ];
 
+  // 从API加载已通过的消息
+  useEffect(() => {
+    const loadMessages = async () => {
+      try {
+        const response = await fetch('/api/feedback');
+        const allMessages = await response.json();
+        // 只显示已通过的消息
+        const approvedMessages = allMessages.filter((msg: { status?: string }) => msg.status === 'approved');
+        setMessages(approvedMessages);
+      } catch (error) {
+        console.error('Failed to load messages:', error);
+      }
+    };
+    
+    loadMessages();
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // 模拟提交
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // 添加到消息列表
-    const newMessage = {
-      id: Date.now().toString(),
-      name: formData.anonymous ? 'Anonymous' : formData.name,
-      email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-      category: formData.category,
-      timestamp: new Date().toISOString(),
-      isAnonymous: formData.anonymous,
-      type: activeTab,
-      status: 'pending' as const
-    };
-    
-    setMessages(prev => [newMessage, ...prev]);
-    
-    // 保存到localStorage供管理页面使用
-    const existingMessages = JSON.parse(localStorage.getItem('feedback-messages') || '[]');
-    const updatedMessages = [newMessage, ...existingMessages];
-    localStorage.setItem('feedback-messages', JSON.stringify(updatedMessages));
-    
-    // 重置表单
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      category: 'general',
-      anonymous: false
-    });
+    try {
+      const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.anonymous ? 'Anonymous' : formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          category: formData.category,
+          isAnonymous: formData.anonymous,
+          type: activeTab
+        })
+      });
+      
+      if (response.ok) {
+        // 重置表单
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          category: 'general',
+          anonymous: false
+        });
+        
+        // 显示成功消息
+        alert('留言提交成功！我们会尽快审核并回复。');
+      } else {
+        throw new Error('Failed to submit message');
+      }
+    } catch (error) {
+      console.error('Failed to submit message:', error);
+      alert('提交失败，请重试。');
+    }
     
     setIsSubmitting(false);
   };
@@ -251,6 +275,18 @@ export default function FeedbackPage() {
                         </div>
                         
                         <p className="text-gray-700 whitespace-pre-wrap">{message.message}</p>
+                        
+                        {message.reply && (
+                          <div className="mt-4 bg-blue-50 p-3 rounded-md">
+                            <div className="text-sm font-medium text-blue-800 mb-1">官方回复：</div>
+                            <p className="text-blue-700">{message.reply}</p>
+                            {message.replyTimestamp && (
+                              <div className="text-xs text-blue-600 mt-1">
+                                {formatDate(message.replyTimestamp)}
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -401,6 +437,18 @@ export default function FeedbackPage() {
                         </div>
                         
                         <p className="text-gray-700 whitespace-pre-wrap">{message.message}</p>
+                        
+                        {message.reply && (
+                          <div className="mt-4 bg-green-50 p-3 rounded-md">
+                            <div className="text-sm font-medium text-green-800 mb-1">官方回复：</div>
+                            <p className="text-green-700">{message.reply}</p>
+                            {message.replyTimestamp && (
+                              <div className="text-xs text-green-600 mt-1">
+                                {formatDate(message.replyTimestamp)}
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
