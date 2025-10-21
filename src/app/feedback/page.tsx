@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PageHero from "@/components/PageHero";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -475,6 +475,7 @@ export default function FeedbackPage() {
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </>

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1761019400000",
+    "name": "Anonymous",
+    "email": "",
+    "subject": "匿名留言",
+    "message": "这是一条匿名留言，测试匿名功能。",
+    "category": "general",
+    "isAnonymous": true,
+    "type": "messages",
+    "timestamp": "2025-10-21T04:20:00.000Z",
+    "status": "rejected"
+  }
+]
