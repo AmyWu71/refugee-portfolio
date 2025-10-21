@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 
 // 定义消息类型
 interface FeedbackMessage {
@@ -18,45 +16,48 @@ interface FeedbackMessage {
   category?: string;
 }
 
-// 数据文件路径
-const DATA_FILE = path.join(process.cwd(), 'src/data/feedback.json');
+// 使用内存存储（在Vercel无服务器环境中）
+let feedbackMessages: FeedbackMessage[] = [];
 
-// 读取数据
-function readMessages(): FeedbackMessage[] {
-  try {
-    if (fs.existsSync(DATA_FILE)) {
-      const data = fs.readFileSync(DATA_FILE, 'utf8');
-      return JSON.parse(data);
+// 初始化一些测试数据
+if (feedbackMessages.length === 0) {
+  feedbackMessages = [
+    {
+      id: "1761019400000",
+      name: "Anonymous",
+      email: "",
+      subject: "匿名留言",
+      message: "这是一条匿名留言，测试匿名功能。",
+      category: "general",
+      isAnonymous: true,
+      type: "messages",
+      timestamp: "2025-10-21T04:20:00.000Z",
+      status: "pending"
+    },
+    {
+      id: "1761019500000",
+      name: "张三",
+      email: "zhangsan@example.com",
+      subject: "关于研究的问题",
+      message: "您好，我对您关于缅甸难民的研究很感兴趣，希望能了解更多细节。",
+      category: "research",
+      isAnonymous: false,
+      type: "questions",
+      timestamp: "2025-10-21T04:30:00.000Z",
+      status: "approved",
+      reply: "感谢您的关注！我会尽快回复您的问题。",
+      replyTimestamp: "2025-10-21T04:35:00.000Z"
     }
-  } catch (error) {
-    console.error('Error reading feedback data:', error);
-  }
-  return [];
-}
-
-// 写入数据
-function writeMessages(messages: FeedbackMessage[]): void {
-  try {
-    // 确保目录存在
-    const dir = path.dirname(DATA_FILE);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(DATA_FILE, JSON.stringify(messages, null, 2));
-  } catch (error) {
-    console.error('Error writing feedback data:', error);
-  }
+  ];
 }
 
 export async function GET() {
-  const messages = readMessages();
-  return NextResponse.json(messages);
+  return NextResponse.json(feedbackMessages);
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const messages = readMessages();
     const newMessage: FeedbackMessage = {
       id: Date.now().toString(),
       ...body,
@@ -64,8 +65,7 @@ export async function POST(request: NextRequest) {
       status: 'pending'
     };
     
-    messages.unshift(newMessage);
-    writeMessages(messages);
+    feedbackMessages.unshift(newMessage);
     return NextResponse.json(newMessage);
   } catch (err) {
     console.error('Failed to save message:', err);
@@ -77,16 +77,14 @@ export async function PUT(request: NextRequest) {
   try {
     const body = await request.json();
     const { id, ...updates } = body;
-    const messages = readMessages();
     
-    const messageIndex = messages.findIndex(msg => msg.id === id);
+    const messageIndex = feedbackMessages.findIndex(msg => msg.id === id);
     if (messageIndex === -1) {
       return NextResponse.json({ error: 'Message not found' }, { status: 404 });
     }
     
-    messages[messageIndex] = { ...messages[messageIndex], ...updates };
-    writeMessages(messages);
-    return NextResponse.json(messages[messageIndex]);
+    feedbackMessages[messageIndex] = { ...feedbackMessages[messageIndex], ...updates };
+    return NextResponse.json(feedbackMessages[messageIndex]);
   } catch (err) {
     console.error('Failed to update message:', err);
     return NextResponse.json({ error: 'Failed to update message' }, { status: 500 });
@@ -102,16 +100,14 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json({ error: 'Message ID is required' }, { status: 400 });
     }
     
-    const messages = readMessages();
-    const messageIndex = messages.findIndex(msg => msg.id === id);
+    const messageIndex = feedbackMessages.findIndex(msg => msg.id === id);
     
     if (messageIndex === -1) {
       return NextResponse.json({ error: 'Message not found' }, { status: 404 });
     }
     
-    const deletedMessage = messages[messageIndex];
-    messages.splice(messageIndex, 1);
-    writeMessages(messages);
+    const deletedMessage = feedbackMessages[messageIndex];
+    feedbackMessages.splice(messageIndex, 1);
     
     return NextResponse.json({ 
       success: true, 
