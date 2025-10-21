@@ -47,18 +47,6 @@ if (feedbackMessages.length === 0) {
       status: "approved",
       reply: "感谢您的关注！我会尽快回复您的问题。",
       replyTimestamp: "2025-10-21T04:35:00.000Z"
-    },
-    {
-      id: "1761019600000",
-      name: "李四",
-      email: "lisi@example.com",
-      subject: "感谢分享",
-      message: "非常感谢您分享这个关于缅甸难民的研究，让我对这个话题有了更深的了解。",
-      category: "general",
-      isAnonymous: false,
-      type: "messages",
-      timestamp: "2025-10-21T04:40:00.000Z",
-      status: "approved"
     }
   ];
 }
