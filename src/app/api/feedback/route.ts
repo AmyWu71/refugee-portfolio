@@ -19,38 +19,6 @@ interface FeedbackMessage {
 // 使用内存存储（在Vercel无服务器环境中）
 let feedbackMessages: FeedbackMessage[] = [];
 
-// 初始化一些测试数据
-if (feedbackMessages.length === 0) {
-  feedbackMessages = [
-    {
-      id: "1761019400000",
-      name: "Anonymous",
-      email: "",
-      subject: "匿名留言",
-      message: "这是一条匿名留言，测试匿名功能。",
-      category: "general",
-      isAnonymous: true,
-      type: "messages",
-      timestamp: "2025-10-21T04:20:00.000Z",
-      status: "approved"
-    },
-    {
-      id: "1761019500000",
-      name: "张三",
-      email: "zhangsan@example.com",
-      subject: "关于研究的问题",
-      message: "您好，我对您关于缅甸难民的研究很感兴趣，希望能了解更多细节。",
-      category: "research",
-      isAnonymous: false,
-      type: "questions",
-      timestamp: "2025-10-21T04:30:00.000Z",
-      status: "approved",
-      reply: "感谢您的关注！我会尽快回复您的问题。",
-      replyTimestamp: "2025-10-21T04:35:00.000Z"
-    }
-  ];
-}
-
 export async function GET() {
   return NextResponse.json(feedbackMessages);
 }

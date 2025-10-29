@@ -4,6 +4,7 @@
     "portfolio": "Portfolio",
     "about": "About",
     "background": "Background",
+    "feedback": "Feedback",
     "contact": "Contact"
   },
   "home": {
@@ -27,27 +28,7 @@
     "all": "All",
     "research": "Research",
     "visual": "Visual",
-    "multimedia": "Multimedia"
-  },
-  "projects": {
-    "researchReport": {
-      "title": "Research Report: Challenges and Reasons for Myanmar Refugees in Thailand in Employment",
-      "summary": "In-depth analysis of employment challenges faced by 3.33 million Myanmar refugees in Thailand, exploring informal employment, systematic exploitation, and identity restrictions."
-    },
-    "handbook": {
-      "title": "Handbook: Refugee Employment, Education and Medication Guide",
-      "summary": "Comprehensive visual guide for refugee employment assistance, covering legal rights, job search strategies, and community resources."
-    },
-    "munProposal": {
-      "title": "MUN Proposal: Rohingya Crisis Proposal",
-      "summary": "A comprehensive MUN proposal addressing the Rohingya refugee crisis, focusing on international cooperation and sustainable solutions for refugee protection and resettlement."
-    },
-    "rohingyaStudy": {
-      "title": "Background Research: A Case Study on Rohingya Refugee",
-      "summary": "A comprehensive case study examining the Rohingya refugee crisis, focusing on their displacement, challenges, and the broader context of Myanmar refugee issues."
-    }
-  },
-  "portfolio": {
+    "multimedia": "Multimedia",
     "handbook": {
       "englishTitle": "Access Guide Education, Work, and Health for Refugees",
       "author": "Author: Xuanjing Wu",
