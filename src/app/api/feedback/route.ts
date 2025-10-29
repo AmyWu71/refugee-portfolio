@@ -17,6 +17,7 @@ interface FeedbackMessage {
 }
 
 // 使用内存存储（在Vercel无服务器环境中）
+// eslint-disable-next-line prefer-const
 let feedbackMessages: FeedbackMessage[] = [];
 
 export async function GET() {
